@@ -67,9 +67,9 @@ export default function BookACall() {
                 {benefits.map((benefit, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 0, x: -8 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
+                    transition={{ delay: 0.3 + i * 0.08, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     className="flex items-center gap-3"
                   >
                     <div className="w-5 h-5 rounded-full bg-cream border border-sand flex items-center justify-center flex-shrink-0">
@@ -85,9 +85,9 @@ export default function BookACall() {
                 {expectations.map((item, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 + i * 0.1 }}
+                    transition={{ delay: 0.6 + i * 0.08, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     className="p-4 rounded-xl bg-white border border-sand"
                   >
                     <item.icon className="w-5 h-5 text-accent-blue mb-3" />
@@ -156,10 +156,10 @@ export default function BookACall() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="group p-8 rounded-xl bg-white border border-sand hover:border-warm-gray transition-all duration-500 flex flex-col"
               >
                 <h4 className="font-display text-xl font-bold text-charcoal mb-3">{item.title}</h4>

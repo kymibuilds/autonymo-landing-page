@@ -161,9 +161,9 @@ function RealEstateIllustration() {
 
       {/* ── Floating: Deal Closed notification ── */}
       <motion.div
-        initial={{ opacity: 0, y: 20, x: 20 }}
+        initial={{ opacity: 0, y: 12, x: 12 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className="absolute -bottom-5 -right-5 bg-white rounded-xl border border-sand shadow-xl shadow-charcoal/10 p-3 flex items-center gap-2.5 z-10"
       >
         <div className="w-9 h-9 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center">
@@ -178,9 +178,9 @@ function RealEstateIllustration() {
 
       {/* ── Floating: AI Agent badge top-left ── */}
       <motion.div
-        initial={{ opacity: 0, y: -15, x: -15 }}
+        initial={{ opacity: 0, y: -8, x: -8 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ delay: 1.4, duration: 0.5 }}
+        transition={{ delay: 1.4, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className="absolute -top-3 -left-3 bg-charcoal rounded-lg shadow-lg px-3 py-2 flex items-center gap-2 z-10"
       >
         <div className="w-5 h-5 rounded-md bg-accent-blue flex items-center justify-center">
@@ -195,9 +195,9 @@ function RealEstateIllustration() {
 
       {/* ── Floating: Notification bell top-right ── */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
+        initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.8, duration: 0.4 }}
+        transition={{ delay: 1.8, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="absolute -top-2 right-12 bg-white rounded-lg shadow-md border border-sand px-2.5 py-1.5 flex items-center gap-1.5 z-10"
       >
         <Bell className="w-3 h-3 text-accent-blue" />
@@ -276,10 +276,10 @@ export default function RealEstateOS() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="text-center"
               >
                 <div className="font-display text-4xl sm:text-5xl font-bold text-charcoal mb-2">{item.metric}</div>
@@ -330,10 +330,10 @@ export default function RealEstateOS() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="p-6 rounded-xl bg-white border border-sand flex flex-col"
               >
                 <item.icon className="w-5 h-5 text-charcoal/30 mb-4" />
@@ -395,10 +395,10 @@ export default function RealEstateOS() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
                 className="group"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 items-start">
@@ -462,10 +462,10 @@ export default function RealEstateOS() {
               ].map((feature, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className="flex gap-4 p-5 rounded-xl bg-white border border-sand hover:border-warm-gray transition-all duration-300"
                 >
                   <div className="w-10 h-10 rounded-xl bg-cream border border-sand flex items-center justify-center flex-shrink-0">
@@ -515,10 +515,10 @@ export default function RealEstateOS() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="group p-8 rounded-xl bg-cream border border-sand hover:border-warm-gray transition-all duration-500 flex flex-col"
               >
                 <span className="font-display text-xs font-bold text-accent-blue uppercase tracking-wider bg-accent-blue/5 px-3 py-1 rounded-full self-start mb-5">

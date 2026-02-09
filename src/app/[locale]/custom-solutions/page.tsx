@@ -123,9 +123,9 @@ function WorkflowIllustration() {
 
       {/* Floating notification */}
       <motion.div
-        initial={{ opacity: 0, y: 20, x: 20 }}
+        initial={{ opacity: 0, y: 12, x: 12 }}
         animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
+        transition={{ delay: 1.2, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className="absolute -bottom-4 -right-4 bg-white rounded-xl border border-sand shadow-lg p-3 flex items-center gap-2"
       >
         <div className="w-8 h-8 rounded-full bg-accent-blue/10 flex items-center justify-center">
@@ -227,10 +227,10 @@ export default function CustomSolutions() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="p-6 rounded-xl bg-cream border border-sand flex flex-col"
               >
                 <item.icon className="w-5 h-5 text-charcoal/30 mb-4" />
@@ -279,10 +279,10 @@ export default function CustomSolutions() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="p-6 rounded-xl bg-white border border-sand flex flex-col"
               >
                 <item.icon className="w-5 h-5 text-charcoal/30 mb-4" />
@@ -345,10 +345,10 @@ export default function CustomSolutions() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
                 className="group"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 items-start">
@@ -422,10 +422,10 @@ export default function CustomSolutions() {
               ].map((feature, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className="flex gap-4 p-5 rounded-xl bg-white border border-sand hover:border-warm-gray transition-all duration-300"
                 >
                   <div className="w-10 h-10 rounded-xl bg-cream border border-sand flex items-center justify-center flex-shrink-0">
@@ -474,10 +474,10 @@ export default function CustomSolutions() {
               ].map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 12 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                   className="flex items-center gap-4 p-5 rounded-xl bg-white/[0.06] border border-white/[0.08]"
                 >
                   <div className="w-10 h-10 rounded-xl bg-white/[0.08] flex items-center justify-center flex-shrink-0">

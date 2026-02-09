@@ -178,10 +178,10 @@ export const Navbar = () => {
               <AnimatePresence>
                 {isLangOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0, y: -6 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
                     className="absolute top-[calc(100%+8px)] right-0 w-36 bg-white/90 backdrop-blur-2xl border border-sand rounded-xl shadow-lg p-1 z-50"
                   >
                     <div className="flex flex-col gap-0.5">
@@ -235,10 +235,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {isSolutionsOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="absolute top-[calc(100%+8px)] left-0 w-full z-40 hidden md:grid grid-cols-3 gap-2 px-3 sm:px-0"
           >
             {industries.map((item, index) => (
@@ -273,10 +273,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMoreOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="absolute top-[calc(100%+8px)] left-0 w-full z-40 hidden md:grid grid-cols-2 gap-2 px-3 sm:px-0"
           >
             {/* Left: Company Links */}
@@ -344,10 +344,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="absolute top-[calc(100%+8px)] left-3 right-3 md:hidden z-40 bg-white/95 backdrop-blur-2xl border border-sand rounded-2xl shadow-xl p-6 max-h-[80vh] overflow-y-auto"
           >
             {/* Industry Solutions */}

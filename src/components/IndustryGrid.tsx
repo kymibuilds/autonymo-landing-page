@@ -60,9 +60,10 @@ export function IndustryGrid() {
         {/* Section Header */}
         <div className="max-w-3xl mb-10">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-caption text-accent-blue font-bold tracking-[0.08em] uppercase mb-4"
           >
             {t("label")}
@@ -82,10 +83,10 @@ export function IndustryGrid() {
             return (
               <motion.div
                 key={industry.key}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
               >
                 <Link href={industry.href} className="block group h-full">
                   <div className="p-6 rounded-xl bg-white border border-sand hover:border-warm-gray transition-all duration-300 flex flex-col h-full relative cursor-pointer hover:shadow-md overflow-hidden group-hover:bg-cream/30">

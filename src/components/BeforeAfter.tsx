@@ -16,9 +16,10 @@ export function BeforeAfter() {
         {/* Section Header */}
         <div className="text-center mb-10">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-caption text-accent-blue font-bold tracking-[0.08em] uppercase mb-4"
           >
             {t("label")}
@@ -35,9 +36,10 @@ export function BeforeAfter() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {/* BEFORE Column */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="rounded-2xl border border-sand bg-sand/15 p-8"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -65,10 +67,10 @@ export function BeforeAfter() {
 
           {/* AFTER Column */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="rounded-2xl border border-sand bg-white p-8 shadow-sm"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -97,9 +99,10 @@ export function BeforeAfter() {
 
         {/* Bottom CTA nudge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 text-center"
         >
           <p className="text-text-muted text-sm inline-flex items-center gap-2">

@@ -36,10 +36,10 @@ const Footer = () => {
   return (
     <div className="relative w-full max-w-6xl mx-auto z-10 px-3 sm:px-0">
       <motion.footer
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 24, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="bg-white border-x border-t border-sand rounded-t-xl shadow-[0_-10px_40px_-15px_rgba(26,26,26,0.05)] overflow-hidden"
       >
         <div className="px-8 pt-12 pb-8">
