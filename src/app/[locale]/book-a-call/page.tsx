@@ -2,7 +2,7 @@
 
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, Calendar, Clock, Globe, CheckCircle2, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function BookACall() {
   const benefits = [

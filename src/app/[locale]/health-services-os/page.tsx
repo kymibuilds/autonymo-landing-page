@@ -20,7 +20,7 @@ import {
   Brain,
   Lock,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 /* ─── Health Dashboard Illustration ─────────────────────────── */
 function HealthIllustration() {

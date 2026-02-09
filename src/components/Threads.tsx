@@ -141,6 +141,8 @@ const Threads: React.FC<ThreadsProps> = ({
     if (!containerRef.current) return;
     const container = containerRef.current;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const renderer = new Renderer({ alpha: true });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
@@ -176,6 +178,17 @@ const Threads: React.FC<ThreadsProps> = ({
     window.addEventListener('resize', resize);
     resize();
 
+    // Render one static frame and stop if user prefers reduced motion
+    if (prefersReducedMotion) {
+      program.uniforms.iTime.value = 0;
+      renderer.render({ scene: mesh });
+      return () => {
+        window.removeEventListener('resize', resize);
+        if (container.contains(gl.canvas)) container.removeChild(gl.canvas);
+        gl.getExtension('WEBGL_lose_context')?.loseContext();
+      };
+    }
+
     let currentMouse = [0.5, 0.5];
     let targetMouse = [0.5, 0.5];
 
@@ -193,7 +206,34 @@ const Threads: React.FC<ThreadsProps> = ({
       container.addEventListener('mouseleave', handleMouseLeave);
     }
 
+    // Pause animation when off-screen
+    let isVisible = true;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible && !animationFrameId.current) {
+          animationFrameId.current = requestAnimationFrame(update);
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
+    // Throttle to ~30fps
+    let lastFrameTime = 0;
+    const frameDuration = 1000 / 30;
+
     function update(t: number) {
+      animationFrameId.current = 0;
+
+      if (!isVisible) return;
+
+      if (t - lastFrameTime < frameDuration) {
+        animationFrameId.current = requestAnimationFrame(update);
+        return;
+      }
+      lastFrameTime = t;
+
       if (enableMouseInteraction) {
         const smoothing = 0.05;
         currentMouse[0] += smoothing * (targetMouse[0] - currentMouse[0]);
@@ -213,6 +253,7 @@ const Threads: React.FC<ThreadsProps> = ({
 
     return () => {
       if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
+      observer.disconnect();
       window.removeEventListener('resize', resize);
 
       if (enableMouseInteraction) {

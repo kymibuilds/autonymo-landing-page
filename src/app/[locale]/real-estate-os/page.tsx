@@ -20,7 +20,7 @@ import {
   FileText,
   Bell,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 /* ─── Dashboard Illustration ─────────────────────────────────── */
 function RealEstateIllustration() {

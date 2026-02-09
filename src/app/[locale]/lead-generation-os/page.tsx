@@ -2,7 +2,7 @@
 
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, Target, Magnet, Filter, Mail, BarChart3, Zap, Phone, Database, TrendingUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function LeadGenerationOS() {
   const features = [

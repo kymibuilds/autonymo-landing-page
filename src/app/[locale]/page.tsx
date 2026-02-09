@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Threads from "@/components/Threads";
 import { SolutionTabs } from "@/components/SolutionTabs";
 import { IndustryGrid } from "@/components/IndustryGrid";
@@ -32,7 +32,7 @@ export default function Home() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="relative z-20 mt-8 text-lg leading-8 text-text-muted max-w-2xl mx-auto sm:text-xl">
+                <p className="relative z-20 mt-8 text-lg leading-8 text-charcoal/80 max-w-2xl mx-auto sm:text-xl">
                   {t("hero.subtitle")}
                 </p>
               </div>

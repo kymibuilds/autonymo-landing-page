@@ -21,7 +21,7 @@ import {
   Search,
   Wrench,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 /* ─── Custom Workflow Illustration ──────────────────────────── */
 function WorkflowIllustration() {
