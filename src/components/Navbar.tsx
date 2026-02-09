@@ -102,7 +102,7 @@ export const Navbar = () => {
               alt="Autonymo"
               width={32}
               height={32}
-              className="w-8 h-8 object-contain transition-transform duration-500 group-hover:rotate-12"
+              className="w-8 h-8 object-contain"
             />
             <span className="font-display text-xl font-bold tracking-tight text-charcoal">
               Autonymo

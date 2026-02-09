@@ -22,7 +22,6 @@ import {
   Wrench,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Particles } from "@/components/ui/particles";
 
 /* ─── Custom Workflow Illustration ──────────────────────────── */
 function WorkflowIllustration() {
@@ -145,14 +144,13 @@ export default function CustomSolutions() {
     <div className="flex flex-col min-h-screen bg-cream font-sans overflow-x-hidden">
       {/* ──────── HERO — Left heading + Right illustration ──────── */}
       <section className="relative pt-28 pb-16 px-6 sm:pt-36 sm:pb-20 bg-cream overflow-hidden">
-        <Particles
-          className="absolute inset-0 z-0 bg-transparent"
-          quantity={60}
-          size={1}
-          color="#A39E97"
-          staticity={60}
-          ease={40}
-        />
+        {/* Lines background pattern */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <line x1="0" y1="0" x2="1000" y2="1000" stroke="rgba(163, 158, 151, 0.08)" strokeWidth="1" />
+            <line x1="1000" y1="0" x2="0" y2="1000" stroke="rgba(163, 158, 151, 0.08)" strokeWidth="1" />
+          </svg>
+        </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — Heading */}
