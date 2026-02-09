@@ -2,7 +2,30 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Building2, Heart, Settings2, Zap, BarChart3, Users, FileText, Calendar, Phone, Workflow, Cpu, Plug, LayoutDashboard } from "lucide-react";
+import {
+  ArrowUpRight,
+  Building2,
+  Heart,
+  Settings2,
+  Zap,
+  BarChart3,
+  Users,
+  FileText,
+  Calendar,
+  Phone,
+  Workflow,
+  Cpu,
+  Plug,
+  LayoutDashboard,
+  TrendingUp,
+  Clock,
+  Bell,
+  CheckCircle2,
+  Activity,
+  MessageSquare,
+  Shield,
+  Database,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -10,30 +33,18 @@ const tabs = [
   {
     key: "realEstate" as const,
     icon: Building2,
-    color: "bg-blue-50",
-    iconColor: "text-blue-600",
-    activeColor: "bg-blue-600",
-    activeBorder: "border-blue-600",
     href: "/real-estate-os" as const,
     moduleIcons: [Zap, BarChart3, Users, FileText],
   },
   {
     key: "healthServices" as const,
     icon: Heart,
-    color: "bg-emerald-50",
-    iconColor: "text-emerald-600",
-    activeColor: "bg-emerald-600",
-    activeBorder: "border-emerald-600",
     href: "/health-services-os" as const,
     moduleIcons: [Calendar, Users, Phone, FileText],
   },
   {
     key: "custom" as const,
     icon: Settings2,
-    color: "bg-amber-50",
-    iconColor: "text-amber-600",
-    activeColor: "bg-amber-600",
-    activeBorder: "border-amber-600",
     href: "/custom-solutions" as const,
     moduleIcons: [Workflow, Cpu, Plug, LayoutDashboard],
   },
@@ -41,11 +52,347 @@ const tabs = [
 
 const moduleKeys = ["module1", "module2", "module3", "module4"] as const;
 
+/* ── Real Estate OS Illustration ────────────────────────────── */
+function RealEstateIllustration() {
+  return (
+    <div className="w-full h-full rounded-xl bg-white border border-sand/80 overflow-hidden relative shadow-sm">
+      {/* Title bar */}
+      <div className="absolute top-0 left-0 right-0 h-9 bg-[#FAFAF8] border-b border-sand/40 flex items-center px-4 gap-1.5">
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="ml-3 h-4 w-24 bg-charcoal/5 rounded" />
+        <div className="ml-auto flex gap-1.5">
+          <div className="h-5 px-2 rounded bg-charcoal/[0.03] border border-charcoal/[0.06] flex items-center gap-1">
+            <Bell className="w-2.5 h-2.5 text-charcoal/20" />
+            <div className="w-3 h-3 rounded-full bg-accent-blue/15 flex items-center justify-center">
+              <span className="text-[6px] font-bold text-accent-blue/60">3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute top-9 left-0 right-0 bottom-0 flex">
+        {/* Sidebar */}
+        <div className="w-[72px] border-r border-sand/30 bg-[#FAFAF8] p-2 flex flex-col gap-1">
+          <div className="h-6 rounded bg-charcoal/[0.06] flex items-center px-1.5 gap-1">
+            <Zap className="w-2.5 h-2.5 text-charcoal/25" />
+            <div className="h-1 w-6 bg-charcoal/10 rounded-full" />
+          </div>
+          <div className="h-6 rounded flex items-center px-1.5 gap-1">
+            <Building2 className="w-2.5 h-2.5 text-charcoal/15" />
+            <div className="h-1 w-5 bg-charcoal/5 rounded-full" />
+          </div>
+          <div className="h-6 rounded flex items-center px-1.5 gap-1">
+            <Users className="w-2.5 h-2.5 text-charcoal/15" />
+            <div className="h-1 w-7 bg-charcoal/5 rounded-full" />
+          </div>
+          <div className="h-6 rounded flex items-center px-1.5 gap-1">
+            <FileText className="w-2.5 h-2.5 text-charcoal/15" />
+            <div className="h-1 w-4 bg-charcoal/5 rounded-full" />
+          </div>
+        </div>
+
+        {/* Main content */}
+        <div className="flex-1 p-3 flex flex-col gap-2.5">
+          {/* Stats row */}
+          <div className="grid grid-cols-3 gap-2">
+            <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1">
+              <div className="flex items-center justify-between">
+                <div className="h-1 w-6 bg-charcoal/8 rounded-full" />
+                <TrendingUp className="w-2.5 h-2.5 text-success/40" />
+              </div>
+              <span className="font-display text-xs font-bold text-charcoal/30">12</span>
+              <div className="h-0.5 w-full bg-success/10 rounded-full">
+                <div className="h-full w-3/4 bg-success/25 rounded-full" />
+              </div>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1">
+              <div className="flex items-center justify-between">
+                <div className="h-1 w-5 bg-charcoal/8 rounded-full" />
+                <Clock className="w-2.5 h-2.5 text-accent-blue/40" />
+              </div>
+              <span className="font-display text-xs font-bold text-charcoal/30">4s</span>
+              <div className="h-0.5 w-full bg-accent-blue/10 rounded-full">
+                <div className="h-full w-[90%] bg-accent-blue/25 rounded-full" />
+              </div>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1">
+              <div className="flex items-center justify-between">
+                <div className="h-1 w-7 bg-charcoal/8 rounded-full" />
+                <CheckCircle2 className="w-2.5 h-2.5 text-charcoal/20" />
+              </div>
+              <span className="font-display text-xs font-bold text-charcoal/30">94%</span>
+              <div className="h-0.5 w-full bg-charcoal/5 rounded-full">
+                <div className="h-full w-[94%] bg-charcoal/10 rounded-full" />
+              </div>
+            </div>
+          </div>
+
+          {/* Lead feed */}
+          <div className="flex-1 bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1.5">
+            <div className="flex items-center justify-between mb-0.5">
+              <div className="h-1.5 w-14 bg-charcoal/10 rounded-full" />
+              <div className="h-3 px-1.5 rounded bg-accent-blue/8 flex items-center">
+                <span className="text-[6px] font-semibold text-accent-blue/50">Live</span>
+              </div>
+            </div>
+            {/* Lead rows */}
+            {[
+              { status: "new", time: "2s" },
+              { status: "qualified", time: "1m" },
+              { status: "contacted", time: "5m" },
+              { status: "new", time: "8s" },
+            ].map((lead, i) => (
+              <div key={i} className="flex items-center gap-1.5 h-5 px-1.5 rounded bg-white/80 border border-sand/20">
+                <div className={`w-1 h-1 rounded-full ${lead.status === "new" ? "bg-accent-blue/40" : lead.status === "qualified" ? "bg-success/40" : "bg-charcoal/15"}`} />
+                <div className="h-1 w-10 bg-charcoal/8 rounded-full" />
+                <div className="h-1 w-6 bg-charcoal/5 rounded-full" />
+                <div className="ml-auto flex items-center gap-1">
+                  <span className="text-[6px] text-charcoal/20 font-medium">{lead.time}</span>
+                  {lead.status === "new" && (
+                    <div className="h-3 px-1 rounded bg-accent-blue/8 flex items-center">
+                      <span className="text-[5px] font-semibold text-accent-blue/50">NEW</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── Health Services OS Illustration ────────────────────────── */
+function HealthIllustration() {
+  return (
+    <div className="w-full h-full rounded-xl bg-white border border-sand/80 overflow-hidden relative shadow-sm">
+      {/* Title bar */}
+      <div className="absolute top-0 left-0 right-0 h-9 bg-[#FAFAF8] border-b border-sand/40 flex items-center px-4 gap-1.5">
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="ml-3 h-4 w-28 bg-charcoal/5 rounded" />
+        <div className="ml-auto flex gap-1.5">
+          <div className="h-5 px-2 rounded bg-charcoal/[0.03] border border-charcoal/[0.06] flex items-center gap-1">
+            <Activity className="w-2.5 h-2.5 text-charcoal/20" />
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute top-9 left-0 right-0 bottom-0 flex">
+        {/* Sidebar */}
+        <div className="w-[72px] border-r border-sand/30 bg-[#FAFAF8] p-2 flex flex-col gap-1">
+          <div className="h-6 rounded bg-charcoal/[0.06] flex items-center px-1.5 gap-1">
+            <Calendar className="w-2.5 h-2.5 text-charcoal/25" />
+            <div className="h-1 w-6 bg-charcoal/10 rounded-full" />
+          </div>
+          <div className="h-6 rounded flex items-center px-1.5 gap-1">
+            <Users className="w-2.5 h-2.5 text-charcoal/15" />
+            <div className="h-1 w-5 bg-charcoal/5 rounded-full" />
+          </div>
+          <div className="h-6 rounded flex items-center px-1.5 gap-1">
+            <MessageSquare className="w-2.5 h-2.5 text-charcoal/15" />
+            <div className="h-1 w-7 bg-charcoal/5 rounded-full" />
+          </div>
+          <div className="h-6 rounded flex items-center px-1.5 gap-1">
+            <Shield className="w-2.5 h-2.5 text-charcoal/15" />
+            <div className="h-1 w-4 bg-charcoal/5 rounded-full" />
+          </div>
+        </div>
+
+        {/* Main content */}
+        <div className="flex-1 p-3 flex flex-col gap-2.5">
+          {/* Calendar grid */}
+          <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1.5">
+            <div className="flex items-center justify-between mb-0.5">
+              <div className="h-1.5 w-12 bg-charcoal/10 rounded-full" />
+              <div className="flex gap-1">
+                <div className="w-3 h-3 rounded bg-charcoal/5 flex items-center justify-center">
+                  <span className="text-[5px] text-charcoal/20">&lt;</span>
+                </div>
+                <div className="w-3 h-3 rounded bg-charcoal/5 flex items-center justify-center">
+                  <span className="text-[5px] text-charcoal/20">&gt;</span>
+                </div>
+              </div>
+            </div>
+            {/* Time slots */}
+            <div className="grid grid-cols-5 gap-1">
+              {["M", "T", "W", "T", "F"].map((day, i) => (
+                <div key={i} className="text-center">
+                  <span className="text-[5px] text-charcoal/20 font-medium">{day}</span>
+                </div>
+              ))}
+              {Array.from({ length: 15 }).map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-3 rounded-sm ${
+                    [2, 5, 7, 11, 13].includes(i)
+                      ? "bg-charcoal/8 border border-charcoal/[0.06]"
+                      : i === 3
+                      ? "bg-accent-blue/10 border border-accent-blue/15"
+                      : "bg-white border border-sand/20"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-2 gap-2">
+            <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1">
+              <div className="h-1 w-8 bg-charcoal/8 rounded-full" />
+              <div className="flex items-end gap-1">
+                <span className="font-display text-xs font-bold text-charcoal/30">98%</span>
+                <span className="text-[6px] text-success/50 font-medium mb-0.5">+2.1%</span>
+              </div>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1">
+              <div className="h-1 w-10 bg-charcoal/8 rounded-full" />
+              <div className="flex items-end gap-1">
+                <span className="font-display text-xs font-bold text-charcoal/30">24</span>
+                <span className="text-[6px] text-charcoal/20 font-medium mb-0.5">today</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Patient list */}
+          <div className="flex-1 bg-[#FAFAF8] rounded-lg border border-sand/30 p-2 flex flex-col gap-1">
+            <div className="h-1.5 w-16 bg-charcoal/10 rounded-full mb-0.5" />
+            {[
+              { type: "confirmed" },
+              { type: "pending" },
+              { type: "reactivated" },
+            ].map((patient, i) => (
+              <div key={i} className="flex items-center gap-1.5 h-5 px-1.5 rounded bg-white/80 border border-sand/20">
+                <div className="w-3 h-3 rounded-full bg-charcoal/5 flex items-center justify-center">
+                  <span className="text-[5px] text-charcoal/15 font-bold">{["A", "M", "R"][i]}</span>
+                </div>
+                <div className="h-1 w-8 bg-charcoal/8 rounded-full" />
+                <div className="ml-auto flex items-center gap-1">
+                  <div className={`h-3 px-1 rounded flex items-center ${
+                    patient.type === "confirmed" ? "bg-success/8" : patient.type === "reactivated" ? "bg-accent-blue/8" : "bg-charcoal/[0.04]"
+                  }`}>
+                    <span className={`text-[5px] font-semibold ${
+                      patient.type === "confirmed" ? "text-success/50" : patient.type === "reactivated" ? "text-accent-blue/50" : "text-charcoal/25"
+                    }`}>
+                      {patient.type === "confirmed" ? "CONF" : patient.type === "reactivated" ? "REACT" : "PEND"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── Custom Solutions Illustration ──────────────────────────── */
+function CustomIllustration() {
+  return (
+    <div className="w-full h-full rounded-xl bg-white border border-sand/80 overflow-hidden relative shadow-sm">
+      {/* Title bar */}
+      <div className="absolute top-0 left-0 right-0 h-9 bg-[#FAFAF8] border-b border-sand/40 flex items-center px-4 gap-1.5">
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="w-2 h-2 rounded-full bg-charcoal/8" />
+        <div className="ml-3 h-4 w-20 bg-charcoal/5 rounded" />
+        <div className="ml-auto flex gap-1.5">
+          <div className="h-5 px-2 rounded bg-charcoal/[0.03] border border-charcoal/[0.06] flex items-center gap-1">
+            <Database className="w-2.5 h-2.5 text-charcoal/20" />
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute top-9 left-0 right-0 bottom-0 p-3 flex flex-col gap-2.5">
+        {/* Workflow visualization */}
+        <div className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-2.5 flex-1 flex flex-col">
+          <div className="flex items-center justify-between mb-2">
+            <div className="h-1.5 w-16 bg-charcoal/10 rounded-full" />
+            <div className="h-3 px-1.5 rounded bg-success/8 flex items-center">
+              <span className="text-[5px] font-semibold text-success/50">Active</span>
+            </div>
+          </div>
+
+          {/* Flow nodes */}
+          <div className="flex-1 flex flex-col items-center justify-center gap-2 relative">
+            {/* Node 1 - Trigger */}
+            <div className="flex items-center gap-2 w-full">
+              <div className="flex-1 h-7 rounded-md bg-white border border-sand/40 flex items-center px-2 gap-1.5">
+                <Zap className="w-2.5 h-2.5 text-charcoal/20" />
+                <div className="h-1 w-8 bg-charcoal/10 rounded-full" />
+              </div>
+              <div className="w-4 h-[1px] bg-charcoal/10" />
+              <div className="flex-1 h-7 rounded-md bg-white border border-sand/40 flex items-center px-2 gap-1.5">
+                <Cpu className="w-2.5 h-2.5 text-charcoal/20" />
+                <div className="h-1 w-6 bg-charcoal/10 rounded-full" />
+              </div>
+            </div>
+
+            {/* Connector */}
+            <div className="w-[1px] h-2 bg-charcoal/10" />
+
+            {/* Node 2 - Processing */}
+            <div className="flex items-center gap-2 w-full">
+              <div className="flex-1 h-7 rounded-md bg-accent-blue/[0.04] border border-accent-blue/10 flex items-center px-2 gap-1.5">
+                <Workflow className="w-2.5 h-2.5 text-accent-blue/30" />
+                <div className="h-1 w-10 bg-accent-blue/10 rounded-full" />
+              </div>
+              <div className="w-4 h-[1px] bg-charcoal/10" />
+              <div className="flex-1 h-7 rounded-md bg-white border border-sand/40 flex items-center px-2 gap-1.5">
+                <Plug className="w-2.5 h-2.5 text-charcoal/20" />
+                <div className="h-1 w-7 bg-charcoal/10 rounded-full" />
+              </div>
+            </div>
+
+            {/* Connector */}
+            <div className="w-[1px] h-2 bg-charcoal/10" />
+
+            {/* Node 3 - Output */}
+            <div className="flex items-center gap-2 w-full">
+              <div className="flex-1 h-7 rounded-md bg-white border border-sand/40 flex items-center px-2 gap-1.5">
+                <LayoutDashboard className="w-2.5 h-2.5 text-charcoal/20" />
+                <div className="h-1 w-9 bg-charcoal/10 rounded-full" />
+              </div>
+              <div className="w-4 h-[1px] bg-charcoal/10" />
+              <div className="flex-1 h-7 rounded-md bg-white border border-sand/40 flex items-center px-2 gap-1.5">
+                <CheckCircle2 className="w-2.5 h-2.5 text-success/30" />
+                <div className="h-1 w-5 bg-charcoal/10 rounded-full" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom stats */}
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            { label: "Workflows", value: "8" },
+            { label: "Integrations", value: "14" },
+            { label: "Uptime", value: "99.9%" },
+          ].map((stat, i) => (
+            <div key={i} className="bg-[#FAFAF8] rounded-lg border border-sand/30 p-1.5 text-center">
+              <span className="font-display text-xs font-bold text-charcoal/25 block">{stat.value}</span>
+              <span className="text-[5px] text-charcoal/15 font-medium">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const illustrations = [RealEstateIllustration, HealthIllustration, CustomIllustration];
+
 export function SolutionTabs() {
   const t = useTranslations("whatWeBuild");
   const [activeTab, setActiveTab] = useState(0);
 
   const currentTab = tabs[activeTab];
+  const Illustration = illustrations[activeTab];
 
   return (
     <section id="solutions" className="py-14 px-6 bg-cream">
@@ -118,8 +465,8 @@ export function SolutionTabs() {
                       key={moduleKey}
                       className="group flex items-start gap-4 p-4 rounded-xl hover:bg-cream/70 transition-colors duration-200"
                     >
-                      <div className={`w-10 h-10 rounded-xl ${currentTab.color} flex items-center justify-center flex-shrink-0`}>
-                        <ModuleIcon className={`w-5 h-5 ${currentTab.iconColor}`} />
+                      <div className="w-10 h-10 rounded-xl bg-[#FAFAF8] border border-sand/60 flex items-center justify-center flex-shrink-0">
+                        <ModuleIcon className="w-[18px] h-[18px] text-charcoal/40" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h4 className="font-display text-sm font-bold text-charcoal mb-1">
@@ -145,76 +492,10 @@ export function SolutionTabs() {
                 </div>
               </div>
 
-              {/* Right: Visual */}
-              <div className="p-8 flex items-center justify-center bg-sand/10 border-t lg:border-t-0 lg:border-l border-sand/50">
-                <div className="w-full aspect-[4/3] rounded-xl bg-white border border-sand/80 overflow-hidden relative shadow-sm">
-                  {/* System mockup visualization */}
-                  <div className="absolute top-0 left-0 right-0 h-8 bg-sand/20 border-b border-sand/40 flex items-center px-3 gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-charcoal/10" />
-                    <div className="w-2 h-2 rounded-full bg-charcoal/10" />
-                    <div className="w-2 h-2 rounded-full bg-charcoal/10" />
-                    <div className="ml-auto px-2 py-0.5 rounded bg-white/60 border border-sand/50">
-                      <span className="text-[8px] font-bold text-charcoal/30 uppercase tracking-wider">
-                        {t(`tabs.${currentTab.key}.label`)}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Dashboard content area */}
-                  <div className="absolute top-8 left-0 right-0 bottom-0 p-3 grid grid-cols-3 grid-rows-3 gap-2">
-                    {/* Sidebar */}
-                    <div className="row-span-3 bg-sand/15 rounded-lg border border-sand/30 p-2 flex flex-col gap-1.5">
-                      {moduleKeys.map((_, i) => (
-                        <div key={i} className={`h-5 rounded ${i === 0 ? `${currentTab.color} border ${currentTab.iconColor.replace('text-', 'border-')}/20` : 'bg-sand/20'} flex items-center px-1.5`}>
-                          <div className={`w-2 h-2 rounded-sm ${i === 0 ? currentTab.iconColor.replace('text-', 'bg-') + '/30' : 'bg-charcoal/5'}`} />
-                          <div className={`ml-1.5 h-1 rounded-full flex-1 ${i === 0 ? 'bg-charcoal/15' : 'bg-charcoal/5'}`} />
-                        </div>
-                      ))}
-                      <div className="flex-1" />
-                      <div className="h-4 rounded bg-sand/20 flex items-center px-1.5">
-                        <div className="w-2 h-2 rounded-full bg-charcoal/5" />
-                        <div className="ml-1.5 h-1 rounded-full w-2/3 bg-charcoal/5" />
-                      </div>
-                    </div>
-
-                    {/* Stat cards */}
-                    <div className="bg-white border border-sand/30 rounded-lg p-2 flex flex-col justify-between">
-                      <div className="h-1 w-1/2 bg-charcoal/10 rounded-full" />
-                      <div className="font-display text-sm font-bold text-charcoal/20">
-                        {activeTab === 0 ? "3.2x" : activeTab === 1 ? "50%" : "85%"}
-                      </div>
-                      <div className="h-1 w-3/4 bg-success/20 rounded-full" />
-                    </div>
-
-                    <div className="bg-white border border-sand/30 rounded-lg p-2 flex flex-col justify-between">
-                      <div className="h-1 w-1/3 bg-charcoal/10 rounded-full" />
-                      <div className="font-display text-sm font-bold text-charcoal/20">
-                        {activeTab === 0 ? "24/7" : activeTab === 1 ? "98%" : "10x"}
-                      </div>
-                      <div className="h-1 w-1/2 bg-accent-blue/20 rounded-full" />
-                    </div>
-
-                    {/* Chart area */}
-                    <div className="col-span-2 row-span-2 bg-white border border-sand/30 rounded-lg p-2 flex flex-col">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="h-1 w-1/4 bg-charcoal/10 rounded-full" />
-                        <div className="flex gap-1">
-                          <div className="w-4 h-2 rounded-sm bg-sand/30" />
-                          <div className="w-4 h-2 rounded-sm bg-sand/30" />
-                        </div>
-                      </div>
-                      <div className="flex-1 flex items-end gap-1 px-1">
-                        {[35, 50, 42, 65, 55, 72, 60, 78, 68, 85, 75, 92].map((h, i) => (
-                          <div key={i} className="flex-1 flex flex-col justify-end">
-                            <div
-                              className={`rounded-sm transition-all duration-500 ${i >= 8 ? currentTab.iconColor.replace('text-', 'bg-') + '/30' : 'bg-sand/30'}`}
-                              style={{ height: `${h}%` }}
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+              {/* Right: Illustration */}
+              <div className="p-8 flex items-center justify-center bg-[#FAFAF8]/50 border-t lg:border-t-0 lg:border-l border-sand/50">
+                <div className="w-full aspect-[4/3]">
+                  <Illustration />
                 </div>
               </div>
             </div>
