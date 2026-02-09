@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonymo — Brand Guidelines</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* === THE AUTONYMO PALETTE === */
+    /* Primary */
+    --charcoal: #1a1a1a;
+    --cream: #f5f0eb;
+    --white: #ffffff;
+    
+    /* Secondary */
+    --sand: #e8e2da;
+    --warm-gray: #a39e97;
+    --light-gray: #f9f7f5;
+    
+    /* Accent */
+    --blue-primary: #2d7ff9;
+    --blue-light: #00b4ff;
+    --blue-dark: #0066ff;
+    
+    /* Functional */
+    --success: #2d8a56;
+    --warning: #d4a017;
+    --error: #c0392b;
+    --info: var(--blue-primary);
+    
+    /* Text */
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4540;
+    --text-muted: #6b6560;
+    --text-light: #a39e97;
+    --text-on-dark: #ffffff;
+    --text-on-dark-muted: rgba(255,255,255,0.6);
+    
+    /* Borders */
+    --border-light: rgba(0,0,0,0.06);
+    --border-medium: rgba(0,0,0,0.1);
+    --border-on-dark: rgba(255,255,255,0.1);
+    
+    /* Spacing scale */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+    --space-3xl: 64px;
+    --space-4xl: 96px;
+    
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* === LAYOUT === */
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* === COVER === */
+  .cover {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    padding: 80px 0;
+    margin-bottom: 64px;
+  }
+
+  .cover-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  .cover-logo svg { width: 48px; height: 48px; }
+
+  .cover-meta {
+    text-align: right;
+    font-size: 12px;
+    color: var(--text-on-dark-muted);
+  }
+
+  .cover h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+
+  .cover p {
+    font-size: 16px;
+    color: var(--text-on-dark-muted);
+    max-width: 520px;
+    line-height: 1.6;
+  }
+
+  .cover-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--blue-primary);
+    margin: 24px 0;
+  }
+
+  /* === SECTIONS === */
+  .section {
+    margin-bottom: 64px;
+  }
+
+  .section-number {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 32px;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: var(--border-light);
+    margin-bottom: 32px;
+  }
+
+  /* === CARDS === */
+  .card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+  }
+
+  .card-dark {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    border-color: var(--border-on-dark);
+  }
+
+  .card-header {
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .card-dark .card-header {
+    border-bottom-color: var(--border-on-dark);
+  }
+
+  .card-header h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .card-header p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .card-dark .card-header p {
+    color: var(--text-on-dark-muted);
+  }
+
+  .card-body {
+    padding: 28px;
+  }
+
+  /* === COLOR SECTION === */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .color-swatch {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .swatch-preview {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .swatch-info {
+    padding: 12px;
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-top: none;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+
+  .swatch-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+
+  .swatch-hex {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'DM Sans', monospace;
+  }
+
+  .swatch-role {
+    font-size: 10px;
+    color: var(--text-light);
+    margin-top: 4px;
+  }
+
+  /* Large swatches for primary */
+  .color-primary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .color-primary-swatch {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .primary-preview {
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+  }
+
+  .primary-preview span {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .primary-info {
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-top: none;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+
+  .primary-info .pi-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .primary-info .pi-hex {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'DM Sans', monospace;
+    margin-bottom: 4px;
+  }
+
+  .primary-info .pi-usage {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.4;
+  }
+
+  /* === TYPOGRAPHY SECTION === */
+  .type-scale {
+    margin-bottom: 24px;
+  }
+
+  .type-row {
+    display: flex;
+    align-items: baseline;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-light);
+    gap: 28px;
+  }
+
+  .type-row:last-child {
+    border-bottom: none;
+  }
+
+  .type-meta {
+    min-width: 160px;
+    flex-shrink: 0;
+  }
+
+  .type-meta .tm-name {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .type-meta .tm-specs {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .type-sample {
+    flex: 1;
+  }
+
+  .ts-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+  }
+
+  .ts-h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .ts-h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .ts-h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .ts-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .ts-small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+
+  .ts-caption {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  /* === LOGO SECTION === */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .logo-box {
+    aspect-ratio: 1;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-box svg { width: 52%; height: 52%; }
+
+  .logo-box .lb-label {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .lb-dark { background: var(--charcoal); }
+  .lb-dark .lb-label { color: var(--text-on-dark-muted); }
+  .lb-cream { background: var(--cream); border: 1px solid var(--border-light); }
+  .lb-cream .lb-label { color: var(--text-muted); }
+  .lb-white { background: var(--white); border: 1px solid var(--border-light); }
+  .lb-white .lb-label { color: var(--text-muted); }
+  .lb-blue { background: var(--blue-primary); }
+  .lb-blue .lb-label { color: rgba(255,255,255,0.7); }
+
+  /* === SPACING === */
+  .spacing-visual {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    margin-bottom: 24px;
+  }
+
+  .spacing-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .spacing-bar {
+    background: var(--blue-primary);
+    opacity: 0.15;
+    border-radius: 4px;
+    width: 40px;
+  }
+
+  .spacing-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .spacing-value {
+    font-size: 10px;
+    color: var(--text-light);
+    font-family: monospace;
+  }
+
+  /* === COMPONENTS === */
+  .component-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .comp-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    padding: 24px;
+  }
+
+  .comp-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  /* Buttons */
+  .btn-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary { background: var(--charcoal); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--charcoal); border: 1px solid var(--border-medium); }
+  .btn-accent { background: var(--blue-primary); color: #fff; }
+  .btn-ghost { background: transparent; color: var(--text-muted); padding: 10px 12px; }
+
+  .btn-label {
+    font-size: 10px;
+    color: var(--text-light);
+    margin-top: 8px;
+  }
+
+  /* Tags */
+  .tag-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .tag-default { background: rgba(0,0,0,0.04); color: var(--text-muted); }
+  .tag-blue { background: rgba(45,127,249,0.08); color: var(--blue-primary); }
+  .tag-dark { background: var(--charcoal); color: #fff; }
+
+  /* === APPLICATION EXAMPLES === */
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .app-example {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+  }
+
+  .app-label {
+    padding: 16px 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .app-preview {
+    padding: 20px;
+  }
+
+  /* Website mock */
+  .web-mock {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    background: var(--cream);
+  }
+
+  .web-bar {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--white);
+  }
+
+  .web-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(0,0,0,0.08); }
+
+  .web-url {
+    font-size: 10px;
+    color: var(--text-light);
+    margin-left: 8px;
+    background: rgba(0,0,0,0.03);
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+
+  .web-content {
+    padding: 20px;
+  }
+
+  .web-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .web-nav-logo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .web-nav-links {
+    display: flex;
+    gap: 16px;
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+
+  .web-hero h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .web-hero p {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    max-width: 300px;
+  }
+
+  .web-cta {
+    display: inline-block;
+    background: var(--charcoal);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 5px;
+  }
+
+  /* Proposal mock */
+  .prop-mock {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+  }
+
+  .prop-head {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .prop-head h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 3px;
+  }
+
+  .prop-head .ph-sub {
+    font-size: 10px;
+    color: var(--text-on-dark-muted);
+  }
+
+  .prop-body {
+    padding: 16px 20px;
+    background: var(--white);
+  }
+
+  .prop-row {
+    margin-bottom: 12px;
+  }
+
+  .prop-row:last-child { margin-bottom: 0; }
+
+  .prop-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .prop-value {
+    font-size: 12px;
+    color: var(--text-primary);
+  }
+
+  /* Social mock */
+  .social-grid-mock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .social-post-mock {
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .spm-dark { background: var(--charcoal); color: #fff; }
+  .spm-cream { background: var(--sand); }
+  .spm-white { background: var(--white); border: 1px solid var(--border-light); }
+  .spm-blue { background: var(--blue-primary); color: #fff; }
+
+  .social-post-mock .spm-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  .social-post-mock .spm-body {
+    font-size: 9px;
+    opacity: 0.6;
+    line-height: 1.3;
+  }
+
+  /* YouTube/Diagram mock */
+  .yt-mock {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--charcoal);
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+  }
+
+  .yt-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(0,0,0,0.4);
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  .yt-badge svg { width: 14px; height: 14px; }
+  .yt-badge span { font-size: 9px; color: #fff; font-weight: 500; }
+
+  .yt-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .yt-content h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .yt-content p {
+    font-size: 10px;
+    color: var(--text-on-dark-muted);
+  }
+
+  /* Diagram mock */
+  .diagram-mock {
+    border-radius: var(--radius-md);
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    padding: 24px;
+  }
+
+  .diagram-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .diagram-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .diagram-node {
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .dn-dark { background: var(--charcoal); color: #fff; }
+  .dn-cream { background: var(--sand); color: var(--text-primary); }
+  .dn-blue { background: rgba(45,127,249,0.1); color: var(--blue-primary); border: 1px solid rgba(45,127,249,0.2); }
+  .dn-outline { background: transparent; color: var(--text-muted); border: 1px solid var(--border-medium); }
+
+  .diagram-arrow {
+    font-size: 14px;
+    color: var(--text-light);
+  }
+
+  /* === RULES & GUIDELINES === */
+  .rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .rule-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    padding: 24px;
+  }
+
+  .rule-icon {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .rule-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .rule-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* Do/Don't */
+  .do-dont-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .do-card, .dont-card {
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    border: 1px solid;
+  }
+
+  .do-card {
+    background: rgba(45,138,86,0.04);
+    border-color: rgba(45,138,86,0.15);
+  }
+
+  .dont-card {
+    background: rgba(192,57,43,0.04);
+    border-color: rgba(192,57,43,0.15);
+  }
+
+  .dd-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .do-card .dd-label { color: var(--success); }
+  .dont-card .dd-label { color: var(--error); }
+
+  .dd-item {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .dd-item:last-child { border-bottom: none; }
+
+  /* === TOKEN TABLE === */
+  .token-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .token-table th {
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-medium);
+  }
+
+  .token-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-secondary);
+  }
+
+  .token-table td:first-child {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .token-table code {
+    font-size: 12px;
+    background: rgba(0,0,0,0.04);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'DM Sans', monospace;
+  }
+
+  /* Quick-ref swatch in table */
+  .inline-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border: 1px solid var(--border-light);
+  }
+
+  /* === FOOTER === */
+  .guidelines-footer {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    padding: 40px 0;
+    margin-top: 64px;
+  }
+
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-inner p {
+    font-size: 13px;
+    color: var(--text-on-dark-muted);
+  }
+
+  .footer-inner .fi-version {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+    .cover-inner { padding: 0 24px; }
+    .cover h1 { font-size: 36px; }
+    .color-grid { grid-template-columns: repeat(3, 1fr); }
+    .color-primary-grid { grid-template-columns: 1fr; }
+    .logo-grid { grid-template-columns: 1fr 1fr; }
+    .component-grid { grid-template-columns: 1fr; }
+    .app-grid { grid-template-columns: 1fr; }
+    .rules-grid { grid-template-columns: 1fr; }
+    .do-dont-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-top">
+      <div class="cover-logo">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="logo-main" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs>
+          <path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#logo-main)"/>
+          <circle cx="50" cy="72" r="6" fill="url(#logo-main)"/>
+        </svg>
+      </div>
+      <div class="cover-meta">
+        Brand Guidelines<br>Version 1.0 · February 2026
+      </div>
+    </div>
+    <h1>Autonymo<br>Brand Guidelines</h1>
+    <div class="cover-divider"></div>
+    <p>The single source of truth for Autonymo's visual identity. Use this document to create consistent, on-brand material across every touchpoint — from website and proposals to social media, diagrams, and video content.</p>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ============ 01. BRAND ESSENCE ============ -->
+<div class="section">
+  <div class="section-number">01</div>
+  <div class="section-title">Brand Essence</div>
+  <div class="section-subtitle">What Autonymo stands for and how we communicate it.</div>
+  <div class="section-divider"></div>
+
+  <div class="rules-grid">
+    <div class="rule-card">
+      <div class="rule-icon">◆</div>
+      <div class="rule-title">Positioning</div>
+      <div class="rule-text">Autonymo is a premium AI Studio that helps businesses integrate AI into their operations. We build custom operating systems — not generic tools. We're consultative, hands-on, and results-driven.</div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-icon">◇</div>
+      <div class="rule-title">Personality</div>
+      <div class="rule-text">Technically capable but not intimidating. Modern but not trendy. Confident but not arrogant. We're the senior advisor who also rolls up their sleeves.</div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-icon">▸</div>
+      <div class="rule-title">Voice</div>
+      <div class="rule-text">Clear, direct, professional. We avoid jargon unless speaking to technical audiences. We lead with outcomes, not features. We show, don't tell.</div>
+    </div>
+    <div class="rule-card">
+      <div class="rule-icon">○</div>
+      <div class="rule-title">Audience</div>
+      <div class="rule-text">Business owners, decision-makers, and operations managers. They need to trust us before they buy. Our brand must communicate credibility and competence instantly.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 02. COLOR SYSTEM ============ -->
+<div class="section">
+  <div class="section-number">02</div>
+  <div class="section-title">Color System</div>
+  <div class="section-subtitle">Our palette balances warm sophistication with strategic pops of blue. The warm tones build trust; the blue signals innovation.</div>
+  <div class="section-divider"></div>
+
+  <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:16px;">Primary Colors</h3>
+  <div class="color-primary-grid">
+    <div class="color-primary-swatch">
+      <div class="primary-preview" style="background:var(--charcoal);">
+        <span style="color:#fff;">Aa</span>
+      </div>
+      <div class="primary-info">
+        <div class="pi-name">Charcoal</div>
+        <div class="pi-hex">#1A1A1A</div>
+        <div class="pi-usage">Headlines, primary buttons, dark sections, proposal headers, video backgrounds</div>
+      </div>
+    </div>
+    <div class="color-primary-swatch">
+      <div class="primary-preview" style="background:var(--cream);">
+        <span style="color:var(--charcoal);">Aa</span>
+      </div>
+      <div class="primary-info">
+        <div class="pi-name">Warm Cream</div>
+        <div class="pi-hex">#F5F0EB</div>
+        <div class="pi-usage">Primary background, page backgrounds, light sections, diagram backgrounds</div>
+      </div>
+    </div>
+    <div class="color-primary-swatch">
+      <div class="primary-preview" style="background:var(--blue-primary);">
+        <span style="color:#fff;">Aa</span>
+      </div>
+      <div class="primary-info">
+        <div class="pi-name">Accent Blue</div>
+        <div class="pi-hex">#2D7FF9</div>
+        <div class="pi-usage">Links, highlights, accent buttons, diagram accent nodes, data visualizations</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:16px;">Supporting Colors</h3>
+  <div class="color-grid">
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:#ffffff; border:1px solid var(--border-light); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">White</div>
+        <div class="swatch-hex">#FFFFFF</div>
+        <div class="swatch-role">Cards, surfaces</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--sand); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Sand</div>
+        <div class="swatch-hex">#E8E2DA</div>
+        <div class="swatch-role">Dividers, subtle fills</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--warm-gray); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Warm Gray</div>
+        <div class="swatch-hex">#A39E97</div>
+        <div class="swatch-role">Captions, labels</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--text-muted); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Text Muted</div>
+        <div class="swatch-hex">#6B6560</div>
+        <div class="swatch-role">Body text, descriptions</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--light-gray); border:1px solid var(--border-light); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Light Gray</div>
+        <div class="swatch-hex">#F9F7F5</div>
+        <div class="swatch-role">Alternate backgrounds</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:16px;">Functional Colors</h3>
+  <div class="color-grid" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--success); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Success</div>
+        <div class="swatch-hex">#2D8A56</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--warning); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Warning</div>
+        <div class="swatch-hex">#D4A017</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--error); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Error</div>
+        <div class="swatch-hex">#C0392B</div>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-preview" style="background:var(--blue-primary); border-radius:var(--radius-md) var(--radius-md) 0 0;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Info</div>
+        <div class="swatch-hex">#2D7FF9</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:16px;">Logo Gradient (reserved for logo only)</h3>
+  <div class="card" style="margin-bottom:24px">
+    <div class="card-body" style="display:flex; align-items:center; gap:20px;">
+      <div style="width:60px; height:60px; border-radius:12px; background:linear-gradient(135deg, #0066ff, #00b4ff);"></div>
+      <div>
+        <div style="font-size:13px; font-weight:500;">Blue Gradient — #0066FF → #00B4FF</div>
+        <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">Used exclusively for the Autonymo logo mark. Do not apply this gradient to other UI elements.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="do-dont-grid">
+    <div class="do-card">
+      <div class="dd-label">✓ Do</div>
+      <div class="dd-item">Use Charcoal for primary text and dark sections</div>
+      <div class="dd-item">Use Cream as the default page background</div>
+      <div class="dd-item">Use Accent Blue sparingly for interactive elements and highlights</div>
+      <div class="dd-item">Use the blue gradient only for the logo</div>
+      <div class="dd-item">Pair Charcoal headers with Cream or White body sections</div>
+    </div>
+    <div class="dont-card">
+      <div class="dd-label">✗ Don't</div>
+      <div class="dd-item">Don't use blue as the dominant color on any page</div>
+      <div class="dd-item">Don't use the gradient on buttons, backgrounds, or text</div>
+      <div class="dd-item">Don't use pure white (#FFFFFF) as the page background — use Cream</div>
+      <div class="dd-item">Don't mix warm and cool grays</div>
+      <div class="dd-item">Don't introduce new colors without extending this system</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 03. TYPOGRAPHY ============ -->
+<div class="section">
+  <div class="section-number">03</div>
+  <div class="section-title">Typography</div>
+  <div class="section-subtitle">Two fonts. One for headlines and emphasis (Plus Jakarta Sans), one for body text and UI (DM Sans). Never mix with other fonts.</div>
+  <div class="section-divider"></div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header">
+      <h3>Type Scale</h3>
+      <p>Use this hierarchy consistently across all materials</p>
+    </div>
+    <div class="card-body">
+      <div class="type-scale">
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Display</div>
+            <div class="tm-specs">Jakarta 700 · 48px · -4% tracking</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-display">Build Smarter</div>
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Heading 1</div>
+            <div class="tm-specs">Jakarta 700 · 36px · -3%</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-h1">AI Operating Systems</div>
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Heading 2</div>
+            <div class="tm-specs">Jakarta 600 · 24px · -2%</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-h2">Custom Solutions for Real Estate</div>
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Heading 3</div>
+            <div class="tm-specs">Jakarta 600 · 18px · -1%</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-h3">How we approach your business</div>
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Body</div>
+            <div class="tm-specs">DM Sans 400 · 15px · 1.6 line-height</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-body">We help businesses integrate AI into their workflows, building custom operating systems that drive measurable results across real estate, healthcare, and beyond.</div>
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Small</div>
+            <div class="tm-specs">DM Sans 400 · 13px · 1.5</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-small">Supporting text, descriptions, and secondary information that complements the primary content above.</div>
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="tm-name">Caption</div>
+            <div class="tm-specs">DM Sans 500 · 11px · uppercase · 8%</div>
+          </div>
+          <div class="type-sample">
+            <div class="ts-caption">Section Label · Category · Date</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="do-dont-grid">
+    <div class="do-card">
+      <div class="dd-label">✓ Typography Rules</div>
+      <div class="dd-item">Always use Plus Jakarta Sans for headlines and emphasis</div>
+      <div class="dd-item">Always use DM Sans for body text and UI elements</div>
+      <div class="dd-item">Use negative letter-spacing on headlines (-2% to -4%)</div>
+      <div class="dd-item">Use uppercase + letter-spacing for labels and captions</div>
+      <div class="dd-item">Keep body text at 15px minimum for readability</div>
+    </div>
+    <div class="dont-card">
+      <div class="dd-label">✗ Avoid</div>
+      <div class="dd-item">Never use other fonts (no Arial, Roboto, Inter, etc.)</div>
+      <div class="dd-item">Never use light/thin weights for body text</div>
+      <div class="dd-item">Never center-align long paragraphs</div>
+      <div class="dd-item">Never use all-caps for body text or long strings</div>
+      <div class="dd-item">Never exceed 70 characters per line width</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 04. LOGO ============ -->
+<div class="section">
+  <div class="section-number">04</div>
+  <div class="section-title">Logo</div>
+  <div class="section-subtitle">The Autonymo "A" mark. Always uses the blue gradient. Pair it with the Autonymo wordmark in Plus Jakarta Sans Bold.</div>
+  <div class="section-divider"></div>
+
+  <div class="logo-grid">
+    <div class="logo-box lb-dark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="l1" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#l1)"/><circle cx="50" cy="72" r="6" fill="url(#l1)"/></svg>
+      <span class="lb-label">On dark</span>
+    </div>
+    <div class="logo-box lb-cream">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="l2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#l2)"/><circle cx="50" cy="72" r="6" fill="url(#l2)"/></svg>
+      <span class="lb-label">On cream</span>
+    </div>
+    <div class="logo-box lb-white">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="l3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#l3)"/><circle cx="50" cy="72" r="6" fill="url(#l3)"/></svg>
+      <span class="lb-label">On white</span>
+    </div>
+    <div class="logo-box lb-blue">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="#fff"/><circle cx="50" cy="72" r="6" fill="#fff"/></svg>
+      <span class="lb-label">On blue (inverted)</span>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-body">
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
+        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="l5" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#l5)"/><circle cx="50" cy="72" r="6" fill="url(#l5)"/></svg>
+        <span style="font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:700; letter-spacing:-0.03em;">Autonymo</span>
+      </div>
+      <div style="font-size:13px; color:var(--text-muted); line-height:1.6;">
+        <strong>Wordmark lockup:</strong> Logo mark + "Autonymo" in Plus Jakarta Sans Bold. Minimum clear space around the logo equals the height of the dot in the logo mark. Minimum logo size: 24px height for digital, 10mm for print.
+      </div>
+    </div>
+  </div>
+
+  <div class="do-dont-grid">
+    <div class="do-card">
+      <div class="dd-label">✓ Do</div>
+      <div class="dd-item">Use the gradient version on dark, cream, or white backgrounds</div>
+      <div class="dd-item">Use the white version on blue or photo backgrounds</div>
+      <div class="dd-item">Maintain minimum clear space around the logo</div>
+    </div>
+    <div class="dont-card">
+      <div class="dd-label">✗ Don't</div>
+      <div class="dd-item">Don't change the gradient colors</div>
+      <div class="dd-item">Don't rotate, skew, or distort the logo</div>
+      <div class="dd-item">Don't place the logo on busy or low-contrast backgrounds</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 05. COMPONENTS ============ -->
+<div class="section">
+  <div class="section-number">05</div>
+  <div class="section-title">Components</div>
+  <div class="section-subtitle">Reusable UI elements for websites, dashboards, and documents.</div>
+  <div class="section-divider"></div>
+
+  <div class="component-grid">
+    <div class="comp-card">
+      <div class="comp-label">Buttons</div>
+      <div class="btn-row">
+        <span class="btn btn-primary">Primary Action</span>
+        <span class="btn btn-secondary">Secondary</span>
+      </div>
+      <div class="btn-row">
+        <span class="btn btn-accent">Accent CTA</span>
+        <span class="btn btn-ghost">Learn more →</span>
+      </div>
+      <div class="btn-label">Primary = Charcoal · Secondary = Outline · Accent = Blue (use sparingly) · Ghost = Text only</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-label">Tags & Badges</div>
+      <div class="tag-row" style="margin-bottom:12px;">
+        <span class="tag tag-default">Real Estate OS</span>
+        <span class="tag tag-default">Health Services</span>
+        <span class="tag tag-blue">New</span>
+        <span class="tag tag-dark">Featured</span>
+      </div>
+      <div class="btn-label">Default = Subtle gray · Blue = Highlight / status · Dark = Emphasis</div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-label">Cards (Light)</div>
+      <div style="background:var(--cream); border-radius:var(--radius-md); padding:16px; border:1px solid var(--border-light);">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:600; margin-bottom:4px;">AI Audit</div>
+        <div style="font-size:12px; color:var(--text-muted); line-height:1.5; margin-bottom:10px;">Comprehensive workflow analysis and AI opportunity mapping.</div>
+        <span style="font-size:11px; color:var(--blue-primary); font-weight:500;">Learn more →</span>
+      </div>
+    </div>
+    <div class="comp-card">
+      <div class="comp-label">Cards (Dark)</div>
+      <div style="background:var(--charcoal); border-radius:var(--radius-md); padding:16px; color:#fff;">
+        <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:14px; font-weight:600; margin-bottom:4px;">Real Estate OS</div>
+        <div style="font-size:12px; color:rgba(255,255,255,0.6); line-height:1.5; margin-bottom:10px;">CRM, automation, and intelligent property management.</div>
+        <span style="font-size:11px; color:var(--blue-light); font-weight:500;">Explore →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spacing -->
+  <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:16px;">Spacing Scale</h3>
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-body">
+      <div class="spacing-visual">
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:4px;"></div>
+          <div class="spacing-label">xs</div>
+          <div class="spacing-value">4px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:8px;"></div>
+          <div class="spacing-label">sm</div>
+          <div class="spacing-value">8px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:16px;"></div>
+          <div class="spacing-label">md</div>
+          <div class="spacing-value">16px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:24px;"></div>
+          <div class="spacing-label">lg</div>
+          <div class="spacing-value">24px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:32px;"></div>
+          <div class="spacing-label">xl</div>
+          <div class="spacing-value">32px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:48px;"></div>
+          <div class="spacing-label">2xl</div>
+          <div class="spacing-value">48px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:64px;"></div>
+          <div class="spacing-label">3xl</div>
+          <div class="spacing-value">64px</div>
+        </div>
+        <div class="spacing-block">
+          <div class="spacing-bar" style="height:96px;"></div>
+          <div class="spacing-label">4xl</div>
+          <div class="spacing-value">96px</div>
+        </div>
+      </div>
+      <div style="font-size:12px; color:var(--text-muted);">Use multiples of 4px for all spacing. Section gaps = 3xl–4xl. Card padding = lg–xl. Element gaps = sm–md.</div>
+    </div>
+  </div>
+
+  <!-- Border radius -->
+  <h3 style="font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:600; margin-bottom:16px;">Border Radius</h3>
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-body">
+      <div style="display:flex; gap:20px; align-items:flex-end; margin-bottom:16px;">
+        <div style="text-align:center;">
+          <div style="width:48px; height:48px; background:var(--sand); border-radius:6px; margin-bottom:6px;"></div>
+          <div style="font-size:10px; color:var(--text-muted);">sm · 6px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:48px; height:48px; background:var(--sand); border-radius:10px; margin-bottom:6px;"></div>
+          <div style="font-size:10px; color:var(--text-muted);">md · 10px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:48px; height:48px; background:var(--sand); border-radius:14px; margin-bottom:6px;"></div>
+          <div style="font-size:10px; color:var(--text-muted);">lg · 14px</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:48px; height:48px; background:var(--sand); border-radius:20px; margin-bottom:6px;"></div>
+          <div style="font-size:10px; color:var(--text-muted);">xl · 20px</div>
+        </div>
+      </div>
+      <div style="font-size:12px; color:var(--text-muted);">Buttons = sm. Inner elements = md. Cards = lg. Sections/modals = xl.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 06. APPLICATIONS ============ -->
+<div class="section">
+  <div class="section-number">06</div>
+  <div class="section-title">Applications</div>
+  <div class="section-subtitle">How the brand system applies across every touchpoint — website, proposals, social media, YouTube, and diagrams.</div>
+  <div class="section-divider"></div>
+
+  <div class="app-grid">
+    <!-- Website -->
+    <div class="app-example">
+      <div class="app-label">Website</div>
+      <div class="app-preview">
+        <div class="web-mock">
+          <div class="web-bar">
+            <div class="web-dot"></div><div class="web-dot"></div><div class="web-dot"></div>
+            <span class="web-url">autonymo.com</span>
+          </div>
+          <div class="web-content">
+            <div class="web-nav">
+              <span class="web-nav-logo">
+                <svg width="14" height="14" viewBox="0 0 100 100"><defs><linearGradient id="wa" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#wa)"/><circle cx="50" cy="72" r="6" fill="url(#wa)"/></svg>
+                Autonymo
+              </span>
+              <div class="web-nav-links"><span>Solutions</span><span>About</span><span>Contact</span></div>
+            </div>
+            <div class="web-hero">
+              <h4>Your AI operating system, designed to perform.</h4>
+              <p>We build custom AI solutions that integrate seamlessly into your business workflows.</p>
+              <span class="web-cta">Book an AI Audit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposal -->
+    <div class="app-example">
+      <div class="app-label">Proposal / PDF</div>
+      <div class="app-preview">
+        <div class="prop-mock">
+          <div class="prop-head">
+            <div>
+              <h4>AI Audit Proposal</h4>
+              <span class="ph-sub">Prepared for Client Name · February 2026</span>
+            </div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-row">
+              <div class="prop-label">Executive Summary</div>
+              <div class="prop-value">A comprehensive analysis of your current workflows with actionable AI integration recommendations.</div>
+            </div>
+            <div class="prop-row">
+              <div class="prop-label">Investment</div>
+              <div class="prop-value"><span style="background:rgba(45,127,249,0.08); color:var(--blue-primary); padding:2px 8px; border-radius:4px; font-weight:500;">€2,500</span> &nbsp;2-week delivery</div>
+            </div>
+            <div class="prop-row">
+              <div class="prop-label">Deliverables</div>
+              <div class="prop-value">Workflow audit report, AI opportunity map, implementation roadmap, ROI projections</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="app-example">
+      <div class="app-label">Social Media (LinkedIn)</div>
+      <div class="app-preview">
+        <div class="social-grid-mock">
+          <div class="social-post-mock spm-dark">
+            <span class="spm-title" style="color:#fff;">5 AI Tools for<br>Real Estate</span>
+            <span class="spm-body" style="color:rgba(255,255,255,0.5);">autonymo.com</span>
+          </div>
+          <div class="social-post-mock spm-cream">
+            <span class="spm-title">Case Study</span>
+            <span class="spm-body">+40% efficiency with ProApi</span>
+          </div>
+          <div class="social-post-mock spm-white">
+            <span style="font-size:18px; margin-bottom:6px;">✦</span>
+            <span class="spm-title">Free AI Audit</span>
+            <span class="spm-body">Book your session</span>
+          </div>
+          <div class="social-post-mock spm-blue">
+            <span class="spm-title" style="color:#fff;">New Feature</span>
+            <span class="spm-body" style="color:rgba(255,255,255,0.7);">Automated reporting</span>
+          </div>
+        </div>
+        <div style="font-size:11px; color:var(--text-light); margin-top:12px;">Rotate between dark, cream, white, and blue backgrounds. Always include wordmark or logo. Use Plus Jakarta Sans for headlines.</div>
+      </div>
+    </div>
+
+    <!-- YouTube / Video -->
+    <div class="app-example">
+      <div class="app-label">YouTube Thumbnails & Video</div>
+      <div class="app-preview">
+        <div class="yt-mock">
+          <div class="yt-badge">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="yt1" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#yt1)"/><circle cx="50" cy="72" r="6" fill="url(#yt1)"/></svg>
+            <span>Autonymo</span>
+          </div>
+          <div class="yt-content">
+            <h4>How AI Transforms<br>Real Estate Operations</h4>
+            <p>Episode 03 · AI Operating Systems</p>
+          </div>
+        </div>
+        <div style="font-size:11px; color:var(--text-light); margin-top:12px;">Dark background (Charcoal). White text in Plus Jakarta Sans Bold. Logo badge top-left. Subtitle in muted text.</div>
+      </div>
+    </div>
+
+    <!-- Diagrams -->
+    <div class="app-example">
+      <div class="app-label">Diagrams & Flowcharts</div>
+      <div class="app-preview">
+        <div class="diagram-mock">
+          <div class="diagram-title">AI Audit Process</div>
+          <div class="diagram-flow">
+            <div class="diagram-node dn-dark">Discovery</div>
+            <span class="diagram-arrow">→</span>
+            <div class="diagram-node dn-cream">Analysis</div>
+            <span class="diagram-arrow">→</span>
+            <div class="diagram-node dn-blue">Roadmap</div>
+            <span class="diagram-arrow">→</span>
+            <div class="diagram-node dn-outline">Delivery</div>
+          </div>
+        </div>
+        <div style="font-size:11px; color:var(--text-light); margin-top:12px;">Use brand colors for diagram nodes. Charcoal = start/primary. Sand = process. Blue = key milestone. Outline = end state. White background, thin borders.</div>
+      </div>
+    </div>
+
+    <!-- Email Signature -->
+    <div class="app-example">
+      <div class="app-label">Email Signature</div>
+      <div class="app-preview">
+        <div style="padding:16px 0; border-top:2px solid var(--charcoal);">
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <svg width="28" height="28" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="es1" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0066ff"/><stop offset="100%" style="stop-color:#00b4ff"/></linearGradient></defs><path d="M50 10 L85 80 C85 85 80 88 76 88 L72 88 C68 88 65 85 63 81 L50 52 L37 81 C35 85 32 88 28 88 L24 88 C20 88 15 85 15 80 Z" fill="url(#es1)"/><circle cx="50" cy="72" r="6" fill="url(#es1)"/></svg>
+            <div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700;">Your Name</div>
+              <div style="font-size:12px; color:var(--text-muted);">Co-Founder · Autonymo</div>
+              <div style="font-size:11px; color:var(--text-light); margin-top:6px;">autonymo.com &nbsp;·&nbsp; Barcelona, Spain</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:11px; color:var(--text-light); margin-top:8px;">Charcoal top-border (2px). Logo left-aligned. Plus Jakarta Sans for name. DM Sans for details. Keep minimal.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 07. QUICK REFERENCE ============ -->
+<div class="section">
+  <div class="section-number">07</div>
+  <div class="section-title">Quick Reference</div>
+  <div class="section-subtitle">Copy-paste values for implementation.</div>
+  <div class="section-divider"></div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header">
+      <h3>Design Tokens</h3>
+    </div>
+    <div class="card-body" style="padding:0;">
+      <table class="token-table">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Value</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="inline-swatch" style="background:#1a1a1a;"></span>Charcoal</td>
+            <td><code>#1A1A1A</code></td>
+            <td>Headlines, dark sections, primary buttons</td>
+          </tr>
+          <tr>
+            <td><span class="inline-swatch" style="background:#f5f0eb;"></span>Cream</td>
+            <td><code>#F5F0EB</code></td>
+            <td>Page backgrounds, light sections</td>
+          </tr>
+          <tr>
+            <td><span class="inline-swatch" style="background:#e8e2da;"></span>Sand</td>
+            <td><code>#E8E2DA</code></td>
+            <td>Dividers, subtle backgrounds, diagram fills</td>
+          </tr>
+          <tr>
+            <td><span class="inline-swatch" style="background:#2d7ff9;"></span>Accent Blue</td>
+            <td><code>#2D7FF9</code></td>
+            <td>Links, highlights, accent CTAs</td>
+          </tr>
+          <tr>
+            <td><span class="inline-swatch" style="background:#ffffff; border-color:var(--border-medium);"></span>White</td>
+            <td><code>#FFFFFF</code></td>
+            <td>Card surfaces, input fields</td>
+          </tr>
+          <tr>
+            <td><span class="inline-swatch" style="background:#6b6560;"></span>Text Muted</td>
+            <td><code>#6B6560</code></td>
+            <td>Body text, descriptions</td>
+          </tr>
+          <tr>
+            <td><span class="inline-swatch" style="background:#a39e97;"></span>Warm Gray</td>
+            <td><code>#A39E97</code></td>
+            <td>Captions, labels, placeholders</td>
+          </tr>
+          <tr>
+            <td>Logo Gradient Start</td>
+            <td><code>#0066FF</code></td>
+            <td>Logo only</td>
+          </tr>
+          <tr>
+            <td>Logo Gradient End</td>
+            <td><code>#00B4FF</code></td>
+            <td>Logo only</td>
+          </tr>
+          <tr>
+            <td>Headline Font</td>
+            <td><code>Plus Jakarta Sans</code></td>
+            <td>Weights: 600, 700, 800</td>
+          </tr>
+          <tr>
+            <td>Body Font</td>
+            <td><code>DM Sans</code></td>
+            <td>Weights: 400, 500, 600</td>
+          </tr>
+          <tr>
+            <td>Border Radius (sm/md/lg/xl)</td>
+            <td><code>6 / 10 / 14 / 20px</code></td>
+            <td>Buttons / Elements / Cards / Sections</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>Google Fonts Import</h3>
+    </div>
+    <div class="card-body">
+      <div style="background:var(--charcoal); color:#fff; padding:16px 20px; border-radius:var(--radius-md); font-size:12px; font-family:monospace; line-height:1.7; overflow-x:auto;">
+        <span style="color:var(--blue-light);">@import</span> url('https://fonts.googleapis.com/css2?<br>
+        &nbsp;&nbsp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800<br>
+        &nbsp;&nbsp;&family=DM+Sans:wght@400;500;600;700<br>
+        &nbsp;&nbsp;&display=swap');
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="guidelines-footer">
+  <div class="footer-inner">
+    <p>Autonymo Brand Guidelines · Version 1.0</p>
+    <span class="fi-version">February 2026 · Internal Document</span>
+  </div>
+</div>
+
+</body>
+</html>
