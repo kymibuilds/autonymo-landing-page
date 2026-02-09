@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "Autonymo — AI & Automation Agency",
+    "description": "We build AI-powered operating systems for Real Estate, Health Services, and custom business solutions."
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "benefits": "Benefits",
+    "process": "Process",
+    "about": "About",
+    "customSolutions": "Custom Solutions",
+    "blog": "Blog",
+    "bookCall": "Book a Call",
+    "more": "More",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get the latest AI insights and product updates.",
+    "deepDiveBlogs": "Deep Dive Blogs",
+    "deepDiveBlogsDesc": "Deep dives into AI automation and strategies.",
+    "realEstateOS": "Real Estate OS",
+    "realEstateOSDesc": "AI-powered property management, owner capture, and contract automation.",
+    "healthServicesOS": "Health Services OS",
+    "healthServicesOSDesc": "Intelligent scheduling, diagnostics, and patient engagement.",
+    "customSolutionsDesc": "Custom AI implementations tailored to your business needs.",
+    "mobileMenu": "Menu"
+  },
+  "hero": {
+    "title": "AI solutions built for",
+    "titleHighlight": "your industry.",
+    "subtitle": "We design, build, and deploy intelligent operating systems for Real Estate, Health Services, and beyond — so your team can focus on what matters most.",
+    "cta": "Book a Discovery Call",
+    "ctaSecondary": "Explore Solutions",
+    "trustedBy": "Powered by leading AI technologies"
+  },
+  "industries": {
+    "label": "Industry Solutions",
+    "title": "Choose your industry.",
+    "titleLine2": "We'll handle the AI.",
+    "subtitle": "Each OS is a complete AI-powered operating system tailored to your industry's workflows, regulations, and growth drivers.",
+    "realEstate": {
+      "name": "Real Estate OS",
+      "tagline": "AI-Powered Real Estate Operations",
+      "description": "A complete operating system for real estate teams. Capture property owners, re-engage cold leads, and automate contracts — all powered by AI.",
+      "features": {
+        "ownerCapture": "Property Owner Capture",
+        "reengagement": "Property Owner Reengagement",
+        "contractHub": "AI Real Estate Contract Hub"
+      },
+      "cta": "Explore Real Estate OS"
+    },
+    "healthServices": {
+      "name": "Health Services OS",
+      "tagline": "AI-Powered Healthcare Operations",
+      "description": "The intelligent backbone for modern healthcare practices. Automate patient scheduling, AI-assisted diagnostics, and insurance verification in one unified system.",
+      "features": {
+        "scheduling": "Smart Patient Scheduling",
+        "diagnostics": "AI-Assisted Diagnostics",
+        "insurance": "Insurance Verification"
+      },
+      "cta": "Explore Health Services OS"
+    },
+    "custom": {
+      "name": "Custom Solutions",
+      "tagline": "Tailored AI for Any Industry",
+      "description": "Don't see your industry? We build bespoke AI operating systems for any business. Our consulting team designs custom solutions from the ground up.",
+      "features": {
+        "workflows": "Custom Workflow Automation",
+        "agents": "Bespoke AI Agents",
+        "integration": "System Integration"
+      },
+      "cta": "Discuss Your Project"
+    },
+    "comingSoon": "Coming Soon"
+  },
+  "capabilities": {
+    "label": "Core Capabilities",
+    "title": "The tools your team actually needs — built to work from day one",
+    "automation": {
+      "title": "Automation Agents",
+      "description": "Automate repetitive workflows and requests across your business. Free your team from manual tasks and make your operations faster, smarter, and more efficient."
+    },
+    "voice": {
+      "title": "AI Voice Agent",
+      "description": "Handle inbound and outbound calls automatically — qualify leads, answer questions, or schedule appointments in multiple languages.",
+      "tags": ["Vision", "Planning", "Marketing"]
+    },
+    "leads": {
+      "title": "Lead Qualification",
+      "description": "Capture and qualify leads automatically across every channel. Our systems prioritise the best opportunities and sync data directly with your CRM or ERP.",
+      "tags": ["Conversion", "Sales"]
+    },
+    "analytics": {
+      "title": "Data & Analytics",
+      "description": "Turn your data into decisions. We integrate AI and ML models to extract insights, identify trends, and surface opportunities hidden in your business data."
+    }
+  },
+  "benefits": {
+    "label": "What sets Autonymo apart",
+    "title": "Built for the demands",
+    "titleLine2": "of the modern enterprise.",
+    "speed": {
+      "title": "Speed",
+      "description": "Faster time-to-value with our enterprise AI solutions and AI agent marketplace."
+    },
+    "control": {
+      "title": "Control",
+      "description": "The power of a standardized platform built for the demands of the enterprise."
+    },
+    "bookMeeting": {
+      "title": "Book a meeting",
+      "description": "Ready to transform your operations?",
+      "cta": "Book Now"
+    },
+    "flexibility": {
+      "title": "Flexibility",
+      "description": "Take control with seamless connection to any AI model, data source, enterprise app, or company infrastructure you need."
+    },
+    "depth": {
+      "title": "Deep capabilities",
+      "description": "An agent platform with the depth to adapt to every interaction, workflow, behavior, and enterprise ecosystem it's deployed into."
+    },
+    "experience": {
+      "title": "Proven experience",
+      "description": "We are an AI-first company that has built its technology and success hand-in-hand with global enterprise customers."
+    }
+  },
+  "howItWorks": {
+    "label": "How It Works",
+    "title": "Getting started is easy",
+    "steps": {
+      "discovery": {
+        "step": "01",
+        "title": "Discovery Call",
+        "description": "We learn about your business, map your workflows, and identify the highest-impact areas where AI can drive real results."
+      },
+      "build": {
+        "step": "02",
+        "title": "Build & Integrate",
+        "description": "We design, develop, and connect your custom AI agents and automations directly into your existing systems."
+      },
+      "launch": {
+        "step": "03",
+        "title": "Launch & Support",
+        "description": "We test everything end-to-end, go live with your team, and provide ongoing optimisation and a 30-day support period."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to automate",
+    "titleLine2": "the unthinkable?",
+    "subtitle": "Join the forward-thinking teams using Autonymo to transform their operations into a competitive advantage.",
+    "button": "Book a Call"
+  },
+  "footer": {
+    "solutions": "Solutions",
+    "company": "Company",
+    "social": "Social",
+    "legal": "Legal",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "bookCall": "Book a Call",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookies",
+    "copyright": "© {year} Autonymo. All rights reserved.",
+    "realEstateOS": "Real Estate OS",
+    "healthServicesOS": "Health Services OS",
+    "customSolutions": "Custom Solutions"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch",
+    "ca": "Català"
+  }
+}

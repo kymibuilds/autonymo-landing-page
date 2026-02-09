@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "title": "Autonymo — Agència d'IA i Automatització",
+    "description": "Construïm sistemes operatius potenciats per IA per a Immobiliària, Serveis de Salut i solucions empresarials personalitzades."
+  },
+  "nav": {
+    "solutions": "Solucions",
+    "industries": "Indústries",
+    "benefits": "Beneficis",
+    "process": "Procés",
+    "about": "Sobre nosaltres",
+    "customSolutions": "Solucions Personalitzades",
+    "blog": "Blog",
+    "bookCall": "Reservar Trucada",
+    "more": "Més",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Rep les últimes novetats sobre IA i actualitzacions de producte.",
+    "deepDiveBlogs": "Articles en Profunditat",
+    "deepDiveBlogsDesc": "Anàlisis profundes sobre automatització i IA.",
+    "realEstateOS": "Real Estate OS",
+    "realEstateOSDesc": "Gestió immobiliària potenciada per IA, captació de propietaris i automatització de contractes.",
+    "healthServicesOS": "Health Services OS",
+    "healthServicesOSDesc": "Programació intel·ligent, diagnòstics i gestió de pacients.",
+    "customSolutionsDesc": "Implementacions d'IA personalitzades adaptades a les necessitats del teu negoci.",
+    "mobileMenu": "Menú"
+  },
+  "hero": {
+    "title": "Solucions d'IA dissenyades per a",
+    "titleHighlight": "la teva indústria.",
+    "subtitle": "Dissenyem, construïm i despleguem sistemes operatius intel·ligents per a Immobiliària, Serveis de Salut i més — perquè el teu equip es pugui centrar en el que realment importa.",
+    "cta": "Reservar una Trucada",
+    "ctaSecondary": "Explorar Solucions",
+    "trustedBy": "Impulsat per les tecnologies d'IA líders"
+  },
+  "industries": {
+    "label": "Solucions per Indústria",
+    "title": "Tria la teva indústria.",
+    "titleLine2": "Nosaltres ens encarreguem de la IA.",
+    "subtitle": "Cada OS és un sistema operatiu complet potenciat per IA, adaptat als fluxos de treball, regulacions i motors de creixement de la teva indústria.",
+    "realEstate": {
+      "name": "Real Estate OS",
+      "tagline": "Operacions Immobiliàries amb IA",
+      "description": "Un sistema operatiu complet per a equips immobiliaris. Capta propietaris, reactiva leads freds i automatitza contractes — tot potenciat per IA.",
+      "features": {
+        "ownerCapture": "Captació de Propietaris",
+        "reengagement": "Reactivació de Propietaris",
+        "contractHub": "Hub de Contractes Immobiliaris amb IA"
+      },
+      "cta": "Explorar Real Estate OS"
+    },
+    "healthServices": {
+      "name": "Health Services OS",
+      "tagline": "Operacions Sanitàries amb IA",
+      "description": "La columna vertebral intel·ligent per a pràctiques mèdiques modernes. Automatitza la programació de pacients, diagnòstics assistits per IA i verificació d'assegurances en un sistema unificat.",
+      "features": {
+        "scheduling": "Programació Intel·ligent de Pacients",
+        "diagnostics": "Diagnòstics Assistits per IA",
+        "insurance": "Verificació d'Assegurances"
+      },
+      "cta": "Explorar Health Services OS"
+    },
+    "custom": {
+      "name": "Solucions Personalitzades",
+      "tagline": "IA a Mida per a Qualsevol Indústria",
+      "description": "No veus la teva indústria? Construïm sistemes operatius d'IA a mida per a qualsevol negoci. El nostre equip de consultoria dissenya solucions personalitzades des de zero.",
+      "features": {
+        "workflows": "Automatització de Fluxos Personalitzats",
+        "agents": "Agents d'IA a Mida",
+        "integration": "Integració de Sistemes"
+      },
+      "cta": "Parlem del Teu Projecte"
+    },
+    "comingSoon": "Properament"
+  },
+  "capabilities": {
+    "label": "Capacitats Principals",
+    "title": "Les eines que el teu equip realment necessita — llestes per funcionar des del primer dia",
+    "automation": {
+      "title": "Agents d'Automatització",
+      "description": "Automatitza fluxos de treball repetitius a tot el teu negoci. Allibera el teu equip de tasques manuals i fes que les teves operacions siguin més ràpides, intel·ligents i eficients."
+    },
+    "voice": {
+      "title": "Agent de Veu IA",
+      "description": "Gestiona trucades entrants i sortints automàticament — qualifica leads, respon preguntes o agenda cites en múltiples idiomes.",
+      "tags": ["Visió", "Planificació", "Màrqueting"]
+    },
+    "leads": {
+      "title": "Qualificació de Leads",
+      "description": "Captura i qualifica leads automàticament a tots els canals. Els nostres sistemes prioritzen les millors oportunitats i sincronitzen dades directament amb el teu CRM o ERP.",
+      "tags": ["Conversió", "Vendes"]
+    },
+    "analytics": {
+      "title": "Dades i Analítica",
+      "description": "Converteix les teves dades en decisions. Integrem models d'IA i ML per extreure insights, identificar tendències i descobrir oportunitats amagades a les teves dades."
+    }
+  },
+  "benefits": {
+    "label": "El que ens diferencia",
+    "title": "Construït per a les exigències",
+    "titleLine2": "de l'empresa moderna.",
+    "speed": {
+      "title": "Velocitat",
+      "description": "Temps de valor més ràpid amb les nostres solucions d'IA empresarial i marketplace d'agents IA."
+    },
+    "control": {
+      "title": "Control",
+      "description": "El poder d'una plataforma estandarditzada construïda per a les exigències de l'empresa."
+    },
+    "bookMeeting": {
+      "title": "Reserva una reunió",
+      "description": "Preparat per transformar les teves operacions?",
+      "cta": "Reservar Ara"
+    },
+    "flexibility": {
+      "title": "Flexibilitat",
+      "description": "Pren el control amb connexió fluida a qualsevol model d'IA, font de dades, aplicació empresarial o infraestructura que necessitis."
+    },
+    "depth": {
+      "title": "Capacitats profundes",
+      "description": "Una plataforma d'agents amb la profunditat per adaptar-se a cada interacció, flux de treball i ecosistema empresarial."
+    },
+    "experience": {
+      "title": "Experiència demostrada",
+      "description": "Som una empresa AI-first que ha construït la seva tecnologia i èxit juntament amb clients empresarials globals."
+    }
+  },
+  "howItWorks": {
+    "label": "Com Funciona",
+    "title": "Començar és fàcil",
+    "steps": {
+      "discovery": {
+        "step": "01",
+        "title": "Trucada de Descobriment",
+        "description": "Aprenem sobre el teu negoci, mapegem els teus fluxos de treball i identifiquem les àrees de major impacte on la IA pot generar resultats reals."
+      },
+      "build": {
+        "step": "02",
+        "title": "Construir i Integrar",
+        "description": "Dissenyem, desenvolupem i connectem els teus agents d'IA personalitzats i automatitzacions directament als teus sistemes existents."
+      },
+      "launch": {
+        "step": "03",
+        "title": "Llançar i Donar Suport",
+        "description": "Provem tot de punta a punta, llancem amb el teu equip i proporcionem optimització contínua i un període de suport de 30 dies."
+      }
+    }
+  },
+  "cta": {
+    "title": "Preparat per automatitzar",
+    "titleLine2": "l'impensable?",
+    "subtitle": "Uneix-te als equips visionaris que fan servir Autonymo per transformar les seves operacions en un avantatge competitiu.",
+    "button": "Reservar una Trucada"
+  },
+  "footer": {
+    "solutions": "Solucions",
+    "company": "Empresa",
+    "social": "Social",
+    "legal": "Legal",
+    "aboutUs": "Sobre Nosaltres",
+    "blog": "Blog",
+    "bookCall": "Reservar Trucada",
+    "privacy": "Política de Privacitat",
+    "terms": "Termes de Servei",
+    "cookies": "Cookies",
+    "copyright": "© {year} Autonymo. Tots els drets reservats.",
+    "realEstateOS": "Real Estate OS",
+    "healthServicesOS": "Health Services OS",
+    "customSolutions": "Solucions Personalitzades"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch",
+    "ca": "Català"
+  }
+}

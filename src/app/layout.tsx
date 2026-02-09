@@ -13,28 +13,23 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Autonymo",
-  description: "AI & Automation for your business",
+  title: "Autonymo — AI & Automation Agency",
+  description:
+    "We build AI-powered operating systems for Real Estate, Health Services, and custom business solutions.",
 };
-
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${plusJakartaSans.variable} ${dmSans.variable} antialiased min-h-screen flex flex-col`}>
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${plusJakartaSans.variable} ${dmSans.variable} antialiased min-h-screen flex flex-col`}
+      >
+        {children}
       </body>
     </html>
   );
 }
-
