@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowDownRight, Globe, ArrowUpRight, Menu, X, Building2, Heart, Target, Settings2 } from "lucide-react";
+import { ArrowDownRight, Globe, ArrowUpRight, Menu, X, Building2, Heart, Target, Settings2, Linkedin, Instagram } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname, Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -105,11 +105,11 @@ export const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1.5 group">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Autonymo"
-              width={32}
-              height={32}
-              className="w-8 h-8 object-contain"
+              width={28}
+              height={28}
+              className="w-7 h-7"
               priority
             />
             <span className="font-display text-xl font-bold tracking-tight text-charcoal">
@@ -240,30 +240,36 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-[calc(100%+8px)] left-0 w-full z-40 hidden md:grid grid-cols-4 gap-2 px-3 sm:px-0"
+            className="absolute top-[calc(100%+6px)] left-3 right-3 sm:left-0 sm:right-0 z-40 hidden md:grid grid-cols-4 gap-2"
           >
             {industries.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
                 onClick={closeAll}
-                className="block group bg-white/90 backdrop-blur-2xl border border-sand rounded-2xl shadow-lg p-6 relative overflow-hidden hover:border-warm-gray transition-all duration-300"
+                className="block group bg-white/95 backdrop-blur-2xl border border-sand/80 rounded-2xl shadow-lg p-5 relative overflow-hidden hover:border-warm-gray hover:shadow-xl transition-all duration-300"
               >
-                <ArrowUpRight className="absolute top-4 right-4 w-5 h-5 text-warm-gray group-hover:text-charcoal/70 group-hover:scale-125 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />
+                {/* Subtle gradient on hover */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${item.color} pointer-events-none`} style={{ opacity: 0 }} />
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-[0.04] transition-opacity duration-500 bg-gradient-to-br from-transparent via-transparent to-current pointer-events-none`} />
 
-                <div
-                  className={`w-10 h-10 rounded-xl ${item.color} flex items-center justify-center mb-4`}
-                >
-                  <item.icon className={`w-5 h-5 ${item.iconColor}`} />
+                <ArrowUpRight className="absolute top-4 right-4 w-4 h-4 text-sand group-hover:text-charcoal/50 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300" />
+
+                <div className="relative z-10">
+                  <div
+                    className={`w-9 h-9 rounded-lg ${item.color} flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-300`}
+                  >
+                    <item.icon className={`w-4 h-4 ${item.iconColor}`} />
+                  </div>
+
+                  <h4 className="font-display text-[15px] font-bold text-charcoal mb-1.5 leading-tight">
+                    {item.title}
+                  </h4>
+
+                  <p className="text-text-muted text-[11px] leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-
-                <h4 className="font-display text-lg font-bold text-charcoal mb-2">
-                  {item.title}
-                </h4>
-
-                <p className="text-text-muted text-xs leading-relaxed">
-                  {item.description}
-                </p>
               </Link>
             ))}
           </motion.div>
@@ -278,7 +284,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-[calc(100%+8px)] left-0 w-full z-40 hidden md:grid grid-cols-2 gap-2 px-3 sm:px-0"
+            className="absolute top-[calc(100%+6px)] left-3 right-3 sm:left-0 sm:right-0 z-40 hidden md:grid grid-cols-2 gap-2"
           >
             {/* Left: Company Links */}
             <div className="bg-white/90 backdrop-blur-2xl border border-sand rounded-2xl shadow-lg p-6 h-full">
@@ -330,25 +336,46 @@ export const Navbar = () => {
                 </form>
               </div>
 
-              {/* Blogs card */}
-              <Link
-                href="/blog"
-                onClick={closeAll}
-                className="bg-white/90 backdrop-blur-2xl border border-sand rounded-2xl shadow-lg p-5 flex flex-col hover:border-warm-gray transition-colors group cursor-pointer overflow-hidden"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <h5 className="text-sm font-bold text-charcoal">
-                    {t("blogs")}
+              {/* Bottom row: Blogs + Social Media */}
+              <div className="grid grid-cols-2 gap-2">
+                {/* Blogs */}
+                <Link
+                  href="/blog"
+                  onClick={closeAll}
+                  className="bg-white/90 backdrop-blur-2xl border border-sand rounded-2xl shadow-lg p-4 flex flex-col hover:border-warm-gray transition-colors group cursor-pointer overflow-hidden"
+                >
+                  <div className="flex items-center justify-between mb-1.5">
+                    <h5 className="text-sm font-bold text-charcoal">
+                      {t("blogs")}
+                    </h5>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-warm-gray group-hover:text-charcoal group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  </div>
+                  <p className="text-[10px] text-text-muted leading-relaxed">
+                    {t("blogsDesc")}
+                  </p>
+                </Link>
+
+                {/* Social Media */}
+                <div className="bg-charcoal rounded-2xl shadow-lg p-4 flex flex-col overflow-hidden">
+                  <h5 className="text-sm font-bold text-white mb-2">
+                    Social
                   </h5>
-                  <ArrowUpRight className="w-4 h-4 text-warm-gray group-hover:text-charcoal group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  <div className="flex gap-2 mt-auto">
+                    <a
+                      href="#"
+                      className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                    >
+                      <Linkedin className="w-3.5 h-3.5 text-white/70" />
+                    </a>
+                    <a
+                      href="#"
+                      className="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                    >
+                      <Instagram className="w-3.5 h-3.5 text-white/70" />
+                    </a>
+                  </div>
                 </div>
-                <p className="text-[11px] text-text-muted leading-relaxed mb-4">
-                  {t("blogsDesc")}
-                </p>
-                <div className="aspect-[3.5/1] rounded-lg bg-sand/30 border border-sand/50 overflow-hidden relative">
-                  <div className="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded border border-white shadow-sm" />
-                </div>
-              </Link>
+              </div>
             </div>
           </motion.div>
         )}
