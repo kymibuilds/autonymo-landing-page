@@ -377,11 +377,11 @@ export default function HealthServicesOS() {
                 className="group"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6 items-start">
-                  <div className="flex md:flex-col items-center gap-3 md:gap-0">
-                    <div className="w-14 h-14 rounded-2xl bg-cream border border-sand flex items-center justify-center group-hover:border-accent-blue/30 group-hover:bg-accent-blue/5 transition-all duration-300">
+                  <div className="flex md:flex-col items-center gap-0">
+                    <div className="w-14 h-14 rounded-2xl bg-cream border border-sand flex items-center justify-center group-hover:border-accent-blue/30 group-hover:bg-accent-blue/5 transition-all duration-300 relative z-10">
                       <item.icon className="w-6 h-6 text-charcoal/40 group-hover:text-accent-blue transition-colors duration-300" />
                     </div>
-                    {i < 3 && <div className="hidden md:block w-px h-16 bg-sand mx-auto mt-3" />}
+                    {i < 3 && <div className="hidden md:block w-px flex-1 min-h-[calc(100%-3.5rem)] bg-sand mx-auto" />}
                   </div>
 
                   <div className="pb-6 md:pb-10">

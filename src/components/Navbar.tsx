@@ -58,9 +58,8 @@ export const Navbar = () => {
 
   const moreLinks = [
     { title: t("about"), href: "/about" as const },
-    { title: t("customSolutions"), href: "/custom-solutions" as const },
     { title: t("blog"), href: "/blog" as const },
-    { title: t("bookCall"), href: "/book-a-call" as const },
+    { title: t("newsletter"), href: "#" as const },
   ];
 
   const locales: Locale[] = ["en", "es", "de", "ca"];
@@ -135,13 +134,6 @@ export const Navbar = () => {
                 />
               </button>
             </div>
-            <Link
-              href={{ pathname: "/", hash: "why-autonymo" }}
-              onClick={closeAll}
-              className="text-sm font-medium text-text-muted hover:text-charcoal transition-colors"
-            >
-              {t("industries")}
-            </Link>
             <Link
               href={{ pathname: "/", hash: "how-it-works" }}
               onClick={closeAll}
@@ -309,21 +301,36 @@ export const Navbar = () => {
 
             {/* Right: Cards */}
             <div className="flex flex-col gap-2">
-              <div className="bg-white/90 backdrop-blur-2xl border border-sand rounded-2xl shadow-lg p-5 flex flex-col hover:border-warm-gray transition-colors group cursor-pointer overflow-hidden">
-                <div className="flex items-center justify-between mb-2">
-                  <h5 className="text-sm font-bold text-charcoal">
-                    {t("newsletter")}
-                  </h5>
-                  <ArrowUpRight className="w-4 h-4 text-warm-gray group-hover:text-charcoal group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
-                </div>
-                <p className="text-[11px] text-text-muted leading-relaxed mb-4">
+              {/* Newsletter — Email signup */}
+              <div className="bg-white/90 backdrop-blur-2xl border border-sand rounded-2xl shadow-lg p-5 flex flex-col overflow-hidden">
+                <h5 className="text-sm font-bold text-charcoal mb-1">
+                  {t("newsletter")}
+                </h5>
+                <p className="text-[11px] text-text-muted leading-relaxed mb-3">
                   {t("newsletterDesc")}
                 </p>
-                <div className="aspect-[3.5/1] rounded-lg bg-light-gray border border-sand/50 overflow-hidden relative">
-                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-white/60 backdrop-blur-sm border-t border-white/40 shadow-sm" />
-                </div>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                  }}
+                  className="flex gap-2"
+                >
+                  <input
+                    type="email"
+                    placeholder="you@company.com"
+                    className="flex-1 px-3 py-2 text-xs rounded-lg border border-sand bg-white text-charcoal placeholder:text-warm-gray focus:outline-none focus:border-accent-blue/40 transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    className="px-4 py-2 text-xs font-semibold text-white bg-charcoal rounded-lg hover:bg-black transition-colors active:scale-95 shrink-0"
+                  >
+                    Subscribe
+                  </button>
+                </form>
               </div>
 
+              {/* Blogs card */}
               <Link
                 href="/blog"
                 onClick={closeAll}
@@ -331,12 +338,12 @@ export const Navbar = () => {
               >
                 <div className="flex items-center justify-between mb-2">
                   <h5 className="text-sm font-bold text-charcoal">
-                    {t("deepDiveBlogs")}
+                    {t("blogs")}
                   </h5>
                   <ArrowUpRight className="w-4 h-4 text-warm-gray group-hover:text-charcoal group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                 </div>
                 <p className="text-[11px] text-text-muted leading-relaxed mb-4">
-                  {t("deepDiveBlogsDesc")}
+                  {t("blogsDesc")}
                 </p>
                 <div className="aspect-[3.5/1] rounded-lg bg-sand/30 border border-sand/50 overflow-hidden relative">
                   <div className="absolute top-2 right-2 w-6 h-6 bg-white/80 rounded border border-white shadow-sm" />

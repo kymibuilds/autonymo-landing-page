@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import Threads from "@/components/Threads";
 import { SolutionTabs } from "@/components/SolutionTabs";
 import { IndustryGrid } from "@/components/IndustryGrid";
-import { BeforeAfter } from "@/components/BeforeAfter";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -170,9 +169,6 @@ export default function Home() {
 
       {/* ──────────────────── INDUSTRY GRID ──────────────────── */}
       <IndustryGrid />
-
-      {/* ──────────────────── BEFORE / AFTER ──────────────────── */}
-      <BeforeAfter />
 
       {/* ──────────────────── HOW IT WORKS SECTION ──────────────────── */}
       <section id="how-it-works" className="py-14 px-6 bg-cream border-y border-sand relative overflow-hidden">
