@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-cream font-sans overflow-x-hidden">
       {/* ──────────────────── HERO SECTION ──────────────────── */}
-      <div className="bg-cream rounded-b-3xl border-b border-sand/30 relative overflow-hidden">
+      <div className="bg-cream rounded-b-3xl border-b border-sand/30 relative overflow-hidden will-change-transform">
         <section className="relative pt-32 pb-40 px-6 sm:pt-44 sm:pb-48 lg:pt-52 lg:pb-60">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -58,7 +58,7 @@ export default function Home() {
                 >
                   <Link
                     href={{ pathname: "/", hash: "solutions" }}
-                    className="relative inline-flex items-center justify-center px-8 py-3 font-medium tracking-tight text-charcoal rounded-xl bg-white/60 backdrop-blur-sm border border-sand/50 text-lg hover:bg-white/80 transition-all active:scale-95"
+                    className="relative inline-flex items-center justify-center px-8 py-3 font-medium tracking-tight text-charcoal rounded-xl bg-white/80 border border-sand/50 text-lg hover:bg-white transition-all active:scale-95"
                   >
                     {t("hero.ctaSecondary")}
                     <ArrowUpRight className="ml-2 w-5 h-5" />

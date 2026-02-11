@@ -265,7 +265,7 @@ const Threads: React.FC<ThreadsProps> = ({
     };
   }, [color, amplitude, distance, enableMouseInteraction, speed]);
 
-  return <div ref={containerRef} className="w-full h-full relative" {...rest} />;
+  return <div ref={containerRef} className="w-full h-full relative will-change-transform" {...rest} />;
 };
 
 export default Threads;
