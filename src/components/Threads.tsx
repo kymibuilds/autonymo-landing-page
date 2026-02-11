@@ -211,9 +211,6 @@ const Threads: React.FC<ThreadsProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         isVisible = entry.isIntersecting;
-        if (isVisible && !animationFrameId.current) {
-          animationFrameId.current = requestAnimationFrame(update);
-        }
       },
       { threshold: 0 }
     );
@@ -224,15 +221,15 @@ const Threads: React.FC<ThreadsProps> = ({
     const frameDuration = 1000 / 30;
 
     function update(t: number) {
-      animationFrameId.current = 0;
+      animationFrameId.current = requestAnimationFrame(update);
+
+      if (t - lastFrameTime < frameDuration) return;
+      lastFrameTime = t;
+
+      // Always advance time so there's no jump when scrolling back
+      program.uniforms.iTime.value = t * 0.001 * speed;
 
       if (!isVisible) return;
-
-      if (t - lastFrameTime < frameDuration) {
-        animationFrameId.current = requestAnimationFrame(update);
-        return;
-      }
-      lastFrameTime = t;
 
       if (enableMouseInteraction) {
         const smoothing = 0.05;
@@ -244,10 +241,8 @@ const Threads: React.FC<ThreadsProps> = ({
         program.uniforms.uMouse.value[0] = 0.5;
         program.uniforms.uMouse.value[1] = 0.5;
       }
-      program.uniforms.iTime.value = t * 0.001 * speed;
 
       renderer.render({ scene: mesh });
-      animationFrameId.current = requestAnimationFrame(update);
     }
     animationFrameId.current = requestAnimationFrame(update);
 
