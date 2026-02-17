@@ -1,0 +1,92 @@
+"use client";
+
+import { motion } from "motion/react";
+import { X, Check } from "lucide-react";
+
+interface WhyWeDifferentProps {
+  industryExample: string;
+}
+
+export default function WhyWeDifferent({ industryExample }: WhyWeDifferentProps) {
+  const vendorItems = [
+    "Sell software, disappear",
+    "Assume your team will figure it out",
+    "One-size-fits-all",
+    "No ongoing support",
+  ];
+
+  const ourItems = [
+    "Audit your operations first",
+    "Deploy on YOUR existing tools",
+    "Train your team",
+    "Manage & optimize monthly",
+  ];
+
+  return (
+    <section className="py-24 px-6 bg-cream border-y border-sand">
+      <div className="max-w-7xl mx-auto">
+        <div className="max-w-3xl mb-16">
+          <h2 className="font-display text-caption text-accent-blue font-bold tracking-[0.08em] uppercase mb-4">
+            Why We&apos;re Different
+          </h2>
+          <h3 className="font-display text-3xl sm:text-4xl font-bold text-charcoal leading-tight">
+            The problem isn&apos;t the tool.
+            <br />
+            It&apos;s that nobody&apos;s running it.
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Left — What Most Vendors Do */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="p-8 rounded-2xl bg-white border border-sand"
+          >
+            <h4 className="font-display text-sm font-bold text-charcoal/50 uppercase tracking-wider mb-6">
+              What Most Vendors Do
+            </h4>
+            <div className="space-y-4">
+              {vendorItems.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <X className="w-3 h-3 text-red-400" />
+                  </div>
+                  <span className="text-text-muted text-[15px] leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right — What We Do */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="p-8 rounded-2xl bg-charcoal text-white"
+          >
+            <h4 className="font-display text-sm font-bold text-white/60 uppercase tracking-wider mb-6">
+              What We Do
+            </h4>
+            <div className="space-y-4 mb-8">
+              {ourItems.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-accent-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-accent-blue" />
+                  </div>
+                  <span className="text-white/80 text-[15px] leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-white/50 text-sm leading-relaxed border-t border-white/10 pt-6">
+              {industryExample}
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
